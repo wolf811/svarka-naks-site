@@ -8,7 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic" rel="stylesheet" type="text/css">
+    <!-- my styles  -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic" rel="stylesheet" type="text/css"> -->
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <title>Журнал "Сварка и диагностика"</title>
 </head>
@@ -59,32 +60,64 @@
                             <a class="nav-link" href="#">Контакты</a>
                         </li>
                     </ul>
-                    <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Поиск..." aria-label="Search">
-                        <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Найти</button>
+                    <form class="my-2 my-lg-0">
+                        <div class="input-group input-group-sm">
+                            <input type="text" class="form-control bg-transparent border-warning" placeholder="Поиск по сайту" aria-label="Поиск по сайту" aria-describedby="button-search-menu" style="color: #fff;">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-warning" type="submit" id="button-search-menu" data-toggle="tooltip" data-placement="bottom" title="Найти"><i class="fas fa-search"></i></button>
+                            </div>
+                        </div>
                     </form>
+                    <a href="#" class="btn btn-warning btn-sm ml-auto" data-toggle="tooltip" data-placement="bottom" title="Вход в личный кабинет"><i class="fas fa-sign-in-alt"></i> Войти</a>
                 </div>
             </div>
         </nav>
-        <div class="jumbotron jumbotron-fluid">
+        <div class="jumbotron jumbotron-fluid mb-0">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-4">
-                        <img src="{% static 'images/logo_journal_up.gif' %}" alt="Логотип журнала" class="img-fluid">
+                        <a href="#"><img src="{% static 'images/logo_journal_up.png' %}" alt="Логотип журнала" class="img-fluid"></a>
                     </div>
                     <div class="col-lg-8">
-                        <h1 class="display-4">Научно-технический и производственный журнал по сварке, контролю и диагностике</h1>
+                        <h2 class="text-lg-right">Научно-технический и производственный журнал по сварке, контролю и диагностике</h2>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="content container">
-        <div class="row">
-            <div class="col-md-8">
-                {% block content %}
-                {% endblock %}
+    <div class="content pt-5">
+        <div class="container">
+            <div class="banners-home mb-5">
+                <div class="mb-3"><a href="#" target="_blank"><img src="{% static 'images/banner_bewelder.jpg' %}" alt="" class="img-fluid rounded w-100"></a></div>
             </div>
+            <div class="row">
+                <div class="col-md-9">
+                    {% block content %}
+                    {% endblock %}
+                </div>
+                <div class="col-md-3">
+                    <div class="home-right-content py-3 px-2">
+                        <div class="mb-3">
+                            <h5>Новый выпуск журнала</h5>
+                            <a href="#" target="_blank"><img src="{% static 'images/img_journal.jpg' %}" alt="" class="img-fluid rounded w-100 shadow" alt="Новый выпуск журнала"></a>
+                        </div>
+                        <div class="card text-white bg-warning mb-3 shadow">
+                            <div class="card-body">
+                                <h5 class="card-title text-uppercase">Электронный архив</h5>
+                                <p class="card-text text-uppercase text-dark">Электронные версии журналов "Сварка и диагностика"</p>
+                            </div>
+                            <div class="card-footer border-warning">
+                                <a href="#" class="text-white font-weight-bold" target="_blank">Перейти в архив <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer bg-dark py-5">
+        <div class="container">
+            <h4 class="text-light">Журнал "Сварка и диагностика"<br><small class="text-muted"> © все права защищены, 2020</small></h4>
         </div>
     </div>
     <!-- Optional JavaScript -->
@@ -92,6 +125,10 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/19f9c18d98.js" crossorigin="anonymous"></script>
+    <!-- my scripts -->
+    <script src="{% static 'js/script.js' %}"></script>
 </body>
 
 </html>
