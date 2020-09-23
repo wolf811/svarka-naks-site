@@ -1,3 +1,7 @@
+:root {
+    --journal-color: #36529D;
+}
+
 .content {
     background: linear-gradient(to right bottom, #f7f5fb 50%, #fff 50%);
 }
@@ -7,4 +11,20 @@
     color: #fff;
     background: rgb(247, 174, 45);
     background: linear-gradient(90deg, rgba(247, 174, 45, 1) 0%, rgba(54, 82, 157, 1) 46%);
+}
+
+.navbar .container {
+    position: relative;
+}
+
+.icon-authorization {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding-top: 5px;
+    padding-right: 1rem;
+}
+
+.text-journal-color {
+    color: var(--journal-color);
 }
