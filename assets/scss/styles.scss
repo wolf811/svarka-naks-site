@@ -1,0 +1,49 @@
+$journal-color: #36529D;
+
+.content {
+    background: linear-gradient(to right bottom, #f7f5fb 50%, #fff 50%);
+}
+
+.jumbotron,
+.home-right-content {
+    color: #fff;
+    background: #f7ae2d;
+    background: linear-gradient(90deg, #f7ae2d 0%, #36529d 46%);
+}
+
+.navbar .container {
+    position: relative;
+}
+
+.icon-authorization {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding-top: 5px;
+    padding-right: 1rem;
+}
+
+.text-journal-color {
+    color: $journal-color;
+}
+
+.home-right-content .card-img-overlay {
+    background-color: rgba(16, 49, 66, 0.6);
+    padding: 0;
+}
+
+.card-overlay-content {
+    background-color: rgba(16, 49, 66, 0.9);
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    margin-top: -25%;
+}
+
+.modal-footer {
+    justify-content: flex-start;
+}
+
+.text-sm {
+    font-size: 75%;
+}
