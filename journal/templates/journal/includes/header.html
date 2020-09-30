@@ -1,18 +1,21 @@
 {% load static %}
 <div class="header">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-journal">
         <div class="container">
             <!-- <a class="navbar-brand" href="#">Navbar</a> -->
             <button class="navbar-toggler border-warning" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a href="#" class="text-warning icon-authorization" id="iconNotAuthorizedUser" data-toggle="modal" data-target="#authorizationModal"><i class="fas fa-user-circle fa-2x"></i></a>
+            <a href="#" class="text-warning icon-authorization" id="iconNotAuthorizedUser" data-toggle="modal" data-target="#authorizationModal" title="Вход в личный кабинет"><i class="fas fa-user fa-lg"></i></a>
             <div class="dropdown icon-authorization" id="iconAuthorizedUser" style="display: none;">
-                <a class="text-journal-color dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user-circle fa-2x"></i></a>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
+                <a class="text-warning dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user-check fa-lg"></i></a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+                    <h4 class="dropdown-header text-color-journal bg-warning mb-2">dev1@naks.ru</h4>
+                    <a class="dropdown-item" href="#">Мой профиль</a>
+                    <a class="dropdown-item" href="#">Заказы</a>
+                    <a class="dropdown-item" href="#">Подписки</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#" id="logOff">Выйти <i class="fas fa-sign-out-alt"></i></a>
                 </div>
             </div>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -54,24 +57,13 @@
                     </li>
                 </ul>
                 <form class="my-2 my-lg-0 mx-auto">
-                    <div class="input-group input-group-sm">
-                        <input type="text" class="form-control bg-transparent border-warning" placeholder="Поиск по сайту" aria-label="Поиск по сайту" aria-describedby="button-search-menu" style="color: #fff;">
+                    <div class="input-group">
+                        <input type="text" class="form-control bg-transparent border-color-journal" placeholder="Поиск по сайту" aria-label="Поиск по сайту" aria-describedby="button-search-menu" style="color: #fff;">
                         <div class="input-group-append">
-                            <button class="btn btn-outline-warning" type="submit" id="button-search-menu" data-toggle="tooltip" data-placement="bottom" title="Найти"><i class="fas fa-search"></i></button>
+                            <button class="btn btn-outline-journal" type="submit" id="button-search-menu" data-toggle="tooltip" data-placement="bottom" title="Найти"><i class="fas fa-search"></i></button>
                         </div>
                     </div>
                 </form>
-                <!-- <a href="#" class="text-warning ml-auto d-none d-lg-inline-block" data-toggle="modal" data-target="#authorizationModal"><i class="fas fa-user-circle fa-2x" data-toggle="tooltip" data-placement="bottom" title="Вход в личный кабинет"></i></a> -->
-                <!-- <div class="dropdown ml-auto">
-                        <a href="#" class="text-warning dropdown-toggle d-none d-lg-inline-block" id="loginYes" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user-circle"></i> wolf811@gmail.com</a>
-                        <div class="dropdown-menu" aria-labelledby="loginYes">
-                            <h5 class="dropdown-header">wolf811@gmail.com</h5>
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i> Выйти</a>
-                        </div>
-                    </div> -->
             </div>
         </div>
     </nav>
@@ -79,7 +71,9 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-4">
-                    <a href="#"><img src="{% static 'images/logo_journal_up.png' %}" alt="Логотип журнала" class="img-fluid"></a>
+                    <div class="mb-4 mb-lg-0">
+                        <a href="#"><img src="{% static 'images/logo_journal_up.png' %}" alt="Логотип журнала" class="img-fluid"></a>
+                    </div>
                 </div>
                 <div class="col-lg-8">
                     <h2 class="text-lg-right">Научно-технический и производственный журнал по сварке, контролю и диагностике</h2>

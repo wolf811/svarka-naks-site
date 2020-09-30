@@ -1,30 +1,77 @@
 $journal-color: #36529D;
 
+.navbar-journal {
+
+    .container {
+        position: relative;
+    }
+
+    .icon-authorization {
+        position: absolute;
+        right: 0;
+        top: 10;
+        padding-top: 5px;
+        padding-right: 1rem;
+
+        .dropdown-toggle::after {
+            display: none;
+        }
+    }
+
+    .dropdown-header {
+        color: $journal-color;
+        font-weight: bold;
+        font-size: inherit;
+    }
+}
+
 .content {
     background: linear-gradient(to right bottom, #f7f5fb 50%, #fff 50%);
 }
 
-.jumbotron,
 .home-right-content {
     color: #fff;
     background: #f7ae2d;
     background: linear-gradient(90deg, #f7ae2d 0%, #36529d 46%);
 }
 
-.navbar .container {
-    position: relative;
+.jumbotron {
+    color: #fff;
+    background: #f7ae2d;
+    background: linear-gradient(90deg, #f7ae2d 0%, #36529d 46%);
+
+    h2 {
+        margin-bottom: 0;
+
+        @media (max-width: 991px) {
+            font-size: 1.5rem;
+        }
+    }
+
 }
 
-.icon-authorization {
-    position: absolute;
-    right: 0;
-    top: 0;
-    padding-top: 5px;
-    padding-right: 1rem;
+.footer {
+    .bg-bark-blue {
+        background-color: #0A2241;
+    }
 }
 
-.text-journal-color {
+.text-color-journal {
     color: $journal-color;
+}
+
+.border-color-journal {
+    border-color: $journal-color;
+}
+
+.btn-outline-journal {
+    color: #ffc107;
+    border-color: $journal-color;
+
+    &:hover {
+        color: #212529;
+        background-color: #ffc107;
+    }
 }
 
 .home-right-content .card-img-overlay {

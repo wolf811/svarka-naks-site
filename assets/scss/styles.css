@@ -1,24 +1,52 @@
+.navbar-journal .container {
+  position: relative; }
+
+.navbar-journal .icon-authorization {
+  position: absolute;
+  right: 0;
+  top: 10;
+  padding-top: 5px;
+  padding-right: 1rem; }
+  .navbar-journal .icon-authorization .dropdown-toggle::after {
+    display: none; }
+
+.navbar-journal .dropdown-header {
+  color: #36529D;
+  font-weight: bold;
+  font-size: inherit; }
+
 .content {
   background: linear-gradient(to right bottom, #f7f5fb 50%, #fff 50%); }
 
-.jumbotron,
 .home-right-content {
   color: #fff;
   background: #f7ae2d;
   background: linear-gradient(90deg, #f7ae2d 0%, #36529d 46%); }
 
-.navbar .container {
-  position: relative; }
+.jumbotron {
+  color: #fff;
+  background: #f7ae2d;
+  background: linear-gradient(90deg, #f7ae2d 0%, #36529d 46%); }
+  .jumbotron h2 {
+    margin-bottom: 0; }
+    @media (max-width: 991px) {
+      .jumbotron h2 {
+        font-size: 1.5rem; } }
+.footer .bg-bark-blue {
+  background-color: #0A2241; }
 
-.icon-authorization {
-  position: absolute;
-  right: 0;
-  top: 0;
-  padding-top: 5px;
-  padding-right: 1rem; }
-
-.text-journal-color {
+.text-color-journal {
   color: #36529D; }
+
+.border-color-journal {
+  border-color: #36529D; }
+
+.btn-outline-journal {
+  color: #ffc107;
+  border-color: #36529D; }
+  .btn-outline-journal:hover {
+    color: #212529;
+    background-color: #ffc107; }
 
 .home-right-content .card-img-overlay {
   background-color: rgba(16, 49, 66, 0.6);
