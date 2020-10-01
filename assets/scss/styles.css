@@ -4,7 +4,7 @@
 .navbar-journal .icon-authorization {
   position: absolute;
   right: 0;
-  top: 10;
+  top: 0.25rem;
   padding-top: 5px;
   padding-right: 1rem; }
   .navbar-journal .icon-authorization .dropdown-toggle::after {
@@ -35,6 +35,13 @@
 .footer .bg-bark-blue {
   background-color: #0A2241; }
 
+.footer .nav-footer .nav-link {
+  padding: 0.25rem 1rem;
+  color: #f8f9fa; }
+  .footer .nav-footer .nav-link:hover {
+    color: #6c757d;
+    transition: 0.3s; }
+
 .text-color-journal {
   color: #36529D; }
 
@@ -61,6 +68,9 @@
 
 .modal-footer {
   justify-content: flex-start; }
+
+.text-bold {
+  font-weight: bold; }
 
 .text-sm {
   font-size: 75%; }

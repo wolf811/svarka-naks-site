@@ -1,4 +1,6 @@
-$journal-color: #36529D;
+$color-journal: #36529D;
+$color-light: #f8f9fa;
+$color-muted: #6c757d;
 
 .navbar-journal {
 
@@ -9,7 +11,7 @@ $journal-color: #36529D;
     .icon-authorization {
         position: absolute;
         right: 0;
-        top: 10;
+        top: 0.25rem;
         padding-top: 5px;
         padding-right: 1rem;
 
@@ -19,7 +21,7 @@ $journal-color: #36529D;
     }
 
     .dropdown-header {
-        color: $journal-color;
+        color: $color-journal;
         font-weight: bold;
         font-size: inherit;
     }
@@ -54,19 +56,31 @@ $journal-color: #36529D;
     .bg-bark-blue {
         background-color: #0A2241;
     }
+
+    .nav-footer {
+        .nav-link {
+            padding: 0.25rem 1rem;
+            color: $color-light;
+
+            &:hover {
+                color: $color-muted;
+                transition: 0.3s;
+            }
+        }
+    }
 }
 
 .text-color-journal {
-    color: $journal-color;
+    color: $color-journal;
 }
 
 .border-color-journal {
-    border-color: $journal-color;
+    border-color: $color-journal;
 }
 
 .btn-outline-journal {
     color: #ffc107;
-    border-color: $journal-color;
+    border-color: $color-journal;
 
     &:hover {
         color: #212529;
@@ -89,6 +103,10 @@ $journal-color: #36529D;
 
 .modal-footer {
     justify-content: flex-start;
+}
+
+.text-bold {
+    font-weight: bold;
 }
 
 .text-sm {
