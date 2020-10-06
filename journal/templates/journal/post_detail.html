@@ -5,7 +5,7 @@
     <div class="container">
         <nav class="mb-5" aria-label="breadcrumb">
             <ol class="breadcrumb bg-transparent border-bottom ">
-                <li class="breadcrumb-item"><a href="{% url 'post_list' %}">Главная</a></li>
+                <li class="breadcrumb-item"><a href="{% url 'home' %}">Главная</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Новость подробнее</li>
             </ol>
         </nav>
@@ -14,13 +14,22 @@
                 <h2 class="text-color-journal">{{ post.title }}</h2>
                 <hr class="title-line mb-4" align="left">
                 <div class="content-left mb-4">
-                    {% if post.published_date %}
-                    <p class="text-secondary">{{ post.published_date }}</p>
-                    {% endif %}
-                    <p class="card-text">{{ post.text|linebreaksbr }}</p>
+                    <div class="row align-items-stretch">
+                        <div class="col-sm-4">
+                            {% if post.published_date %}
+                            <p class="text-secondary">{{ post.published_date }}</p>
+                            {% endif %}
+                            <div class="mb-3 mb-md-0">
+                                <img src="{% static 'images/conf.jpg' %}" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="col-sm-8">
+                            <p class="card-text">{{ post.text|linebreaksbr }}</p>
+                        </div>
+                    </div>
                 </div>
                 <hr class="title-line mt-1 mb-4" align="left">
-                <a href="{% url 'post_list' %}" class="btn btn-primary mb-5"><i class="fas fa-arrow-left"></i> Назад</a>
+                <a href="{% url 'home' %}" class="btn btn-primary mb-5"><i class="fas fa-arrow-left"></i> Назад</a>
             </div>
             <div class="col-lg-4 col-xl-3">
                 {% include 'journal/includes/home-content-right.html' %}

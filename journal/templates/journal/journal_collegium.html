@@ -1,0 +1,89 @@
+{% extends 'journal/base.html' %}
+{% load static %}
+{% block content %}
+<div class="content py-5">
+    <div class="container">
+        <nav class="mb-5" aria-label="breadcrumb">
+            <ol class="breadcrumb bg-transparent border-bottom ">
+                <li class="breadcrumb-item"><a href="{% url 'home' %}">Главная</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Редакционная коллегия</li>
+            </ol>
+        </nav>
+        <div class="row">
+            <div class="col-lg-8 col-xl-9">
+                <h2 class="text-color-journal">Редакционная коллегия</h2>
+                <hr class="title-line mb-4" align="left">
+                <div class="content-left mb-4">
+                    <h4 class="mb-4">Редакционная коллегия <small class="text-muted">(Editorial team)</small></h4>
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link active" id="russian-tab" data-toggle="tab" href="#russian" role="tab" aria-controls="russian" aria-selected="true">На русском</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="english-tab" data-toggle="tab" href="#english" role="tab" aria-controls="english" aria-selected="false">English</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="russian" role="tabpanel" aria-labelledby="russian-tab">
+                            <div class="my-4">
+                                <h5>Главный редактор:</h5>
+                                <ul class="list-group list-group-flush mb-4">
+                                    <li class="list-group-item list-group-item-light border-warning"><strong>Н. П. Алешин</strong> – Академик Российской Академии Наук, доктор технических наук, профессор. ФГБОУ ВПО Московский государственный технический университет имени Н.Э. Баумана, заведующий кафедрой «Технологии сварки и диагностики»</li>
+                                </ul>
+                                <h5>Редакционная коллегия:</h5>
+                                <ul class="list-group list-group-flush mb-4">
+                                    <li class="list-group-item list-group-item-light border-warning"><strong>В. В. Атрощенко</strong> – Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid unde praesentium voluptas, suscipit repudiandae quo quidem nobis a ut ipsa minus, aspernatur, eos nulla dicta.</li>
+                                    <li class="list-group-item list-group-item-light border-warning"><strong>Е. М. Вышемирский</strong> – Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid unde praesentium voluptas, suscipit repudiandae quo quidem nobis a ut ipsa minus, aspernatur, eos nulla dicta.</li>
+                                    <li class="list-group-item list-group-item-light border-warning"><strong>Э. А. Гладков</strong> – Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid unde praesentium voluptas, suscipit repudiandae quo quidem nobis a ut ipsa minus, aspernatur, eos nulla dicta.</li>
+                                    <li class="list-group-item list-group-item-light border-warning"><strong>М. В. Григорьев</strong> – Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid unde praesentium voluptas, suscipit repudiandae quo quidem nobis a ut ipsa minus, aspernatur, eos nulla dicta.</li>
+                                    <li class="list-group-item list-group-item-light border-warning"><strong>Г. Я. Дымкин</strong> – Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid unde praesentium voluptas, suscipit repudiandae quo quidem nobis a ut ipsa minus, aspernatur, eos nulla dicta.</li>
+                                    <li class="list-group-item list-group-item-light border-warning"><strong>А. М. Левченко</strong> – Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid unde praesentium voluptas, suscipit repudiandae quo quidem nobis a ut ipsa minus, aspernatur, eos nulla dicta.</li>
+                                    <li class="list-group-item list-group-item-light border-warning"><strong>Л. М. Лобанов</strong> – Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid unde praesentium voluptas, suscipit repudiandae quo quidem nobis a ut ipsa minus, aspernatur, eos nulla dicta.</li>
+                                    <li class="list-group-item list-group-item-light border-warning"><strong>В. А. Лопота</strong> – Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid unde praesentium voluptas, suscipit repudiandae quo quidem nobis a ut ipsa minus, aspernatur, eos nulla dicta.</li>
+                                    <li class="list-group-item list-group-item-light border-warning"><strong>В. И. Лысак</strong> – Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid unde praesentium voluptas, suscipit repudiandae quo quidem nobis a ut ipsa minus, aspernatur, eos nulla dicta.</li>
+                                    <li class="list-group-item list-group-item-light border-warning"><strong>С. И. Полосков</strong> – Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid unde praesentium voluptas, suscipit repudiandae quo quidem nobis a ut ipsa minus, aspernatur, eos nulla dicta.</li>
+                                </ul>
+                                <div class="alert alert-secondary" role="alert">
+                                    <p class="text-bold">Согласие всех членов редакционного совета и редакционной коллегии на вхождение в их составы получено</p>
+                                    <p>Директор ООО «НАКС Медиа»: И.А. Прилуцкий</p>
+                                    <p>Выпускающий редактор: А.С. Титов</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="english" role="tabpanel" aria-labelledby="english-tab">
+                            <div class="my-4">
+                                <h5>Editor-in-Chief:</h5>
+                                <ul class="list-group list-group-flush mb-4">
+                                    <li class="list-group-item list-group-item-light border-warning"><strong>N. P. Alyoshin</strong> – Academician of Russian Academy of Science, Doctor of Technical Science, Professor, Head of Welding and Diagnostics Department, Bauman State Technical University</li>
+                                </ul>
+                                <h5>Editorial Board:</h5>
+                                <ul class="list-group list-group-flush mb-4">
+                                    <li class="list-group-item list-group-item-light border-warning"><strong>V. V. Atroshchenko</strong> – Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid unde praesentium voluptas, suscipit repudiandae quo quidem nobis a ut ipsa minus, aspernatur, eos nulla dicta.</li>
+                                    <li class="list-group-item list-group-item-light border-warning"><strong>E. M. Vyshemirsky</strong> – Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid unde praesentium voluptas, suscipit repudiandae quo quidem nobis a ut ipsa minus, aspernatur, eos nulla dicta.</li>
+                                    <li class="list-group-item list-group-item-light border-warning"><strong>E. A. Gladkov</strong> – Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid unde praesentium voluptas, suscipit repudiandae quo quidem nobis a ut ipsa minus, aspernatur, eos nulla dicta.</li>
+                                    <li class="list-group-item list-group-item-light border-warning"><strong>M. V. Grigorev</strong> – Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid unde praesentium voluptas, suscipit repudiandae quo quidem nobis a ut ipsa minus, aspernatur, eos nulla dicta.</li>
+                                    <li class="list-group-item list-group-item-light border-warning"><strong>G. J. Dymkin</strong> – Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid unde praesentium voluptas, suscipit repudiandae quo quidem nobis a ut ipsa minus, aspernatur, eos nulla dicta.</li>
+                                    <li class="list-group-item list-group-item-light border-warning"><strong>A. M. Levchenko</strong> – Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid unde praesentium voluptas, suscipit repudiandae quo quidem nobis a ut ipsa minus, aspernatur, eos nulla dicta.</li>
+                                    <li class="list-group-item list-group-item-light border-warning"><strong>L. M. Lobanov</strong> – Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid unde praesentium voluptas, suscipit repudiandae quo quidem nobis a ut ipsa minus, aspernatur, eos nulla dicta.</li>
+                                    <li class="list-group-item list-group-item-light border-warning"><strong>V. A. Lopota</strong> – Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid unde praesentium voluptas, suscipit repudiandae quo quidem nobis a ut ipsa minus, aspernatur, eos nulla dicta.</li>
+                                    <li class="list-group-item list-group-item-light border-warning"><strong>V. I. Lysak</strong> – Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid unde praesentium voluptas, suscipit repudiandae quo quidem nobis a ut ipsa minus, aspernatur, eos nulla dicta.</li>
+                                    <li class="list-group-item list-group-item-light border-warning"><strong>S. I. Poloskov</strong> – Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid unde praesentium voluptas, suscipit repudiandae quo quidem nobis a ut ipsa minus, aspernatur, eos nulla dicta.</li>
+                                </ul>
+                                <div class="alert alert-secondary" role="alert">
+                                    <p class="text-bold">Consent of all the members of the Editorial Board and Editorial Board on entry into their compounds received</p>
+                                    <p>Director of company with limited liability «NAKS Media»: I.A. Prilutskii</p>
+                                    <p>Managing Editor: A. S. Titov</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr class="title-line mt-1 mb-4" align="left">
+            </div>
+            <div class="col-lg-4 col-xl-3">
+                {% include 'journal/includes/home-content-right.html' %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

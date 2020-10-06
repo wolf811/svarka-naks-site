@@ -61,9 +61,13 @@ body {
     color: #36529D; }
   .home-content-left .card .preview .card-text {
     font-size: 90%; }
+  .home-content-left .card .preview .card-text-date {
+    margin-bottom: 0.5rem; }
   .home-content-left .card .preview hr {
     width: 50px;
-    border-top: 3px solid #ffc107; }
+    border-top: 3px solid #ffc107;
+    margin-top: 0.25rem;
+    margin-bottom: 1rem; }
   .home-content-left .card .preview-bottom {
     position: absolute;
     bottom: 20px; }
@@ -129,5 +133,13 @@ body {
     color: #fff;
     background-color: #36529D;
     border-color: #36529D; }
+
+.pagination-primary .page-item.active .page-link {
+  background-color: #36529D;
+  border-color: #36529D; }
+
+.pagination-primary .page-link {
+  color: #36529D;
+  border: 1px solid #dee2e6; }
 
 /*# sourceMappingURL=styles.css.map */

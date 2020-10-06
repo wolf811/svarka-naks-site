@@ -20,19 +20,19 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Главная <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="{% url 'home' %}">Главная <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Новости</a>
+                        <a class="nav-link" href="{% url 'post_list' %}">Новости</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Журнал
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
-                            <a class="dropdown-item" href="#">О журнале</a>
-                            <a class="dropdown-item" href="#">Учредители</a>
-                            <a class="dropdown-item" href="#">Редакционная коллегия</a>
+                            <a class="dropdown-item" href="{% url 'journal_info' %}">О журнале</a>
+                            <a class="dropdown-item" href="{% url 'journal_founders' %}">Учредители</a>
+                            <a class="dropdown-item" href="{% url 'journal_collegium' %}">Редакционная коллегия</a>
                             <a class="dropdown-item" href="#">Порядок рецензирования</a>
                         </div>
                     </li>
@@ -68,7 +68,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-5">
                     <div class="mb-4 mb-lg-0">
-                        <a href="#"><img src="{% static 'images/logo_journal_up.png' %}" alt="Логотип журнала" class="img-fluid"></a>
+                        <a href="{% url 'home' %}"><img src="{% static 'images/logo_journal_up.png' %}" alt="Логотип журнала" class="img-fluid"></a>
                     </div>
                 </div>
                 <div class="col-lg-7">

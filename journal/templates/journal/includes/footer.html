@@ -5,7 +5,7 @@
             <div class="nav-footer">
                 <div class="row">
                     <div class="col-sm-5">
-                        <a href="#" class="nav-link mb-4"><img src="{% static 'images/logo-bottom-svarka-alfa.png' %}" alt="Logo" class="img-fluid"></a>
+                        <a href="{% url 'home' %}" class="nav-link mb-4"><img src="{% static 'images/logo-bottom-svarka-alfa.png' %}" alt="Logo" class="img-fluid"></a>
                         <hr class="border-secondary">
                         <nav class="nav flex-column">
                             <a href="tel:+74997847700" class="nav-link text-warning"><i class="fas fa-phone-square-alt"></i> +7 (499) 784-77-00</a>
@@ -15,12 +15,12 @@
                     </div>
                     <div class="col-sm">
                         <nav class="nav flex-column">
-                            <a class="nav-link" href="#">Главная</a>
-                            <a class="nav-link" href="#">Новости</a>
-                            <a class="nav-link" href="#">О&nbsp;журнале</a>
-                            <a class="nav-link" href="#">Учредители</a>
-                            <a class="nav-link" href="#">Редакционная&nbsp;коллегия</a>
-                            <a class="nav-link" href="#">Порядок&nbsp;рецензирования</a>
+                            <a class="nav-link" href="{% url 'home' %}">Главная</a>
+                            <a class="nav-link" href="{% url 'post_list' %}">Новости</a>
+                            <a class="nav-link" href="{% url 'journal_info' %}">О&nbsp;журнале</a>
+                            <a class="nav-link" href="{% url 'journal_founders' %}">Учредители</a>
+                            <a class="nav-link" href="{% url 'journal_collegium' %}">Редакционная коллегия</a>
+                            <a class="nav-link" href="#">Порядок рецензирования</a>
                         </nav>
                     </div>
                     <div class="col-sm">
@@ -51,7 +51,7 @@
                 </div>
                 <div class="col-sm-4 text-center text-sm-right">
                     <div class="mb-3 mb-sm-0">
-                        <a href="#" class="text-muted" target="_blank"><i class="far fa-file-pdf"></i> Политика обработки ПДн</a>
+                        <a href="#" class="text-muted" target="_blank"><i class="far fa-file-pdf"></i> Политика обработки&nbsp;ПДн</a>
                     </div>
                 </div>
                 <div class="col-sm-4 text-center text-sm-right">

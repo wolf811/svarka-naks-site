@@ -1,0 +1,91 @@
+{% extends 'journal/base.html' %}
+{% load static %}
+{% block content %}
+<div class="content py-5">
+    <div class="container">
+        <nav class="mb-5" aria-label="breadcrumb">
+            <ol class="breadcrumb bg-transparent border-bottom ">
+                <li class="breadcrumb-item"><a href="{% url 'home' %}">Главная</a></li>
+                <li class="breadcrumb-item active" aria-current="page">О журнале</li>
+            </ol>
+        </nav>
+        <div class="row">
+            <div class="col-lg-8 col-xl-9">
+                <h2 class="text-color-journal">О журнале</h2>
+                <hr class="title-line mb-4" align="left">
+                <div class="content-left mb-4">
+                    <h4 class="mb-4">Информация о журнале <small class="text-muted">(Information about the magazine)</small></h4>
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link active" id="russian-tab" data-toggle="tab" href="#russian" role="tab" aria-controls="russian" aria-selected="true">На русском</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="english-tab" data-toggle="tab" href="#english" role="tab" aria-controls="english" aria-selected="false">English</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="russian" role="tabpanel" aria-labelledby="russian-tab">
+                            <div class="my-4">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item list-group-item-light border-warning">Издается с 2007 года;</li>
+                                    <li class="list-group-item list-group-item-light border-warning">Журнал зарегистрирован Федеральной службой по надзору в сфере связи и массовых коммуникаций. <a href="#" target="_blank">Свидетельство о регистрации ПИ № ФС77-47389 от 23 ноября 2011 г.</a>;</li>
+                                    <li class="list-group-item list-group-item-light border-warning">Главный редактор: президент НАКС, академик РАН, заведующий кафедрой «Технологии сварки и диагностики» МГТУ им. Баумана <a href="{% url 'alyoshin' %}">Николай Павлович Алёшин</a>;</li>
+                                    <li class="list-group-item list-group-item-light border-warning">Издательство: ООО «НАКС Медиа», г. Москва;</li>
+                                    <li class="list-group-item list-group-item-light border-warning">Периодичность выпуска – 1 раз в 2 месяца;</li>
+                                    <li class="list-group-item list-group-item-light border-warning">Тираж: 3000 экземпляров;</li>
+                                    <li class="list-group-item list-group-item-light border-warning">Объем журнала – 64 страницы;</li>
+                                    <li class="list-group-item list-group-item-light border-warning">Формат издания: А4;</li>
+                                    <li class="list-group-item list-group-item-light border-warning">Тип печати: полноцветная офсетная;</li>
+                                    <li class="list-group-item list-group-item-light border-warning">Распространение: каталог «Роспечати» и другие агентства;</li>
+                                    <li class="list-group-item list-group-item-light">ISSN 2071-5234</li>
+                                </ul>
+                            </div>
+                            <p>Журнал «Сварка и Диагностика» входит в Перечень российских рецензируемых научных журналов и изданий Высшей аттестационной комиссии (ВАК) Минобрнауки РФ.</p>
+                            <p class="text-secondary text-bold">Журнал «Сварка и Диагностика» включает в себя несколько разделов:</p>
+                            <ol class="text-secondary">
+                                <li>Информационный - новости Системы аттестации сварочного производства и деятельности Национального Агентства Контроля Сварки, а также обзоры профильных выставок, конференций, семинаров, освещаются значимые памятные даты и юбилеи.</li>
+                                <li>Научно-технический - научные статьи и основные научные результаты диссертаций на соискание ученой степени доктора и кандидата наук.</li>
+                                <li>Производственный - материалы о новейших исследованиях и достижениях в области сварки и родственных технологий в важнейших производственных сферах экономики России: в нефтегазовом комплексе, в атомной энергетике, машиностроении, в строительстве и других отраслях промышленности.</li>
+                                <li>Библиография – обзор патентов и свидетельств РФ.</li>
+                            </ol>
+                            <p>В журнале публикуются статьи известных ученых - академика НАН Украины Б.Е. Патона, академика РАН Н.П. Алёшина, руководителей научных школ и известных специалистов – д.т.н., профессора Г.В. Конюшков а (Саратов), д.т.н., профессора В.В. Атрощенко (Уфа), член-корреспондента РАН В.А. Лопоты (Москва), член-корреспондента РАН В.И. Лысака (Волгоград), д.т.н., профессора В.Ф. Лукьянова (Ростов-на-Дону), д.т.н., профессора В.А. Судника (Тула), д.т.н., профессора Я.Г. Смородинского (Екатеринбург) и других. В журнале публикуют результаты своих разработок известные в России организаторы промышленного производства, такие как д.т.н. А.С. Зубченко (Москва), д.т.н. А.В. Люшинский (Раменское), к.т.н. В.В. Рощин (Москва) и другие.</p>
+                            <p>Поддержание высокого научно-технического уровня публикаций в журнале обеспечивает редакционная коллегия во главе с Н.П. Алёшиным. Несмотря на то, что журнал довольно молодой, с небольшой пока биографией, на сегодняшний день он является авторитетным периодическим изданием по сварке и родственным технологиям в России, о чем свидетельствует и импакт-фактор <a href="https://www.elibrary.ru/projects/citation/cit_index.asp" target="_blank">Российского индекса научного цитирования (РИНЦ)</a>. В настоящее время журнал активно развивается и укрепляет свои лидирующие позиции среди научных издательств России и стран СНГ.</p>
+                        </div>
+                        <div class="tab-pane fade" id="english" role="tabpanel" aria-labelledby="english-tab">
+                            <div class="my-4">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item list-group-item-light border-warning">Publishing since 2007 year;</li>
+                                    <li class="list-group-item list-group-item-light border-warning">The magazine is registered by Federal service for surveillance in the sphere of communications and mass communications. <a href="#" target="_blank">Registration certificate ПИ № ФС77-47389 from November 23, 2011 year</a>;</li>
+                                    <li class="list-group-item list-group-item-light border-warning">Editor-in-Chief: <a href="{% url 'alyoshin' %}">Nikolay Alyoshin</a>, President NAKS, Academician of Russian Academy of Science, Doctor of Technical Science, Professor, Head of Welding and Diagnostics Department, Bauman State Technical University;</li>
+                                    <li class="list-group-item list-group-item-light border-warning">Publisher: LLC «NAKS Media», Moscow;</li>
+                                    <li class="list-group-item list-group-item-light border-warning">Periodicity: 1 per 2 months;</li>
+                                    <li class="list-group-item list-group-item-light border-warning">Print run: 3000 copies;</li>
+                                    <li class="list-group-item list-group-item-light border-warning">The amount of log - 64 pages;</li>
+                                    <li class="list-group-item list-group-item-light border-warning">Format: A4;</li>
+                                    <li class="list-group-item list-group-item-light border-warning">Type of printing: full color offset;</li>
+                                    <li class="list-group-item list-group-item-light border-warning">Distribution: catalog «Rospechat» and other agencies;</li>
+                                    <li class="list-group-item list-group-item-light border-warning">ISSN 2071-5234</li>
+                                </ul>
+                            </div>
+                            <p>Magazine «Welding and Diagnostics» is included in lists of peer-reviewed scientific journals and publications of the Higher attestation commission (HAC), Ministry of education and science of the Russian Federation.</p>
+                            <p class="text-secondary text-bold">Magazine «Welding and Diagnostics» includes several sections:</p>
+                            <ol class="text-secondary">
+                                <li>Information: news appraisal system of welding production and activity of the National Agency for the control of welding, as well as reviews of specialized exhibitions, conferences, seminars, and highlights significant observances and anniversaries.</li>
+                                <li>Scientific and technical: scientific articles and the main scientific results of dissertations on competition of a scientific degree of doctor and candidate of Sciences.</li>
+                                <li>Manufacturing: materials about the latest research and advances in the field of welding and related technologies in key production areas of the Russian economy: oil, nuclear power engineering, mechanical engineering, construction and other industries.</li>
+                                <li>Bibliography: overview of patents and certificates of the Russian Federation.</li>
+                            </ol>
+                            <p>The journal publishes articles of famous scientists: academician of the NAS of Ukraine Boris Paton, academician of the Russian Academy of Sciences Nikolay Alyoshin, heads of scientific schools and well-known specialists – Dr. of technical sciences, prof. G.V. Koniushkov (Saratov), Dr. of technical sciences, prof. V.V. Atroschenko (Ufa), corresponding member of RAS V.A. Lopota (Moscow), corresponding member of RAS V.I. Lysak (Volgograd), Dr. of technical sciences, prof. V.F. Lukyanov (Rostov-na-Donu), Dr. of technical sciences, prof. V.A. Sudnick (Tula), Dr. of technical sciences, prof. Y.G. Smorodinsky (Ekaterinburg) and others. The journal publishes the results of their development known in Russia, organizers of industrial production such as Dr. of technical sciences A.S. Zubchenko (Moscow), Dr. A.V. Lushinsky (Ramenskoye), candidate of technical sciences V.V. Roschin (Moscow) and others.</p>
+                            <p>Maintaining a high level of scientific and technical publications in the journal provides editorial board led by N.P. Alyoshin. Despite the fact that the magazine is quite young, with a small biography yet, to date, he is the authoritative periodical on welding and related technologies in Russia, as evidenced by the impact factor of <a href="https://www.elibrary.ru/projects/citation/cit_index.asp" target="_blank">Russian Science Citation Index (INDEX)</a>. Currently the magazine actively develops and strengthens its leading positions among scientific publishers in Russia and CIS countries.</p>
+                        </div>
+                    </div>
+                </div>
+                <hr class="title-line mt-1 mb-4" align="left">
+            </div>
+            <div class="col-lg-4 col-xl-3">
+                {% include 'journal/includes/home-content-right.html' %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

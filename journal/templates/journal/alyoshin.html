@@ -1,0 +1,100 @@
+{% extends 'journal/base.html' %}
+{% load static %}
+{% block content %}
+<div class="content py-5">
+    <div class="container">
+        <nav class="mb-5" aria-label="breadcrumb">
+            <ol class="breadcrumb bg-transparent border-bottom ">
+                <li class="breadcrumb-item"><a href="{% url 'home' %}">Главная</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Алёшин Николай Павлович</li>
+            </ol>
+        </nav>
+        <div class="row">
+            <div class="col-lg-8 col-xl-9">
+                <h2 class="text-color-journal">Алёшин Николай Павлович</h2>
+                <hr class="title-line mb-4" align="left">
+                <div class="content-left mb-4">
+                    <h4 class="mb-4">Алёшин Николай Павлович <small class="text-muted">(Alyoshin Nikolay Pavlovich)</small></h4>
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link active" id="russian-tab" data-toggle="tab" href="#russian" role="tab" aria-controls="russian" aria-selected="true">На русском</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="english-tab" data-toggle="tab" href="#english" role="tab" aria-controls="english" aria-selected="false">English</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="russian" role="tabpanel" aria-labelledby="russian-tab">
+                            <div class="my-4">
+                                <div class="row align-items-center">
+                                    <div class="col-sm-3">
+                                        <img src="{% static 'images/alyoshin.jpg' %}" alt="Alyoshin" class="img-fluid">
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <p><strong>Николай Павлович Алёшин</strong> – президент Национального Агентства Контроля Сварки, академик Российской Академии Наук (РАН), доктор технических наук, профессор, заведующий кафедрой «Технологии сварки и диагностики» МГТУ им. Н.Э. Баумана, российский ученый в области сварки, заслуженный деятель науки и техники РФ, председатель секции НТС ОАО «Газпром», директор Федерального государственного автономного учреждения Научно-учебный центр «Сварка и контроль», член Межведомственной комиссии по техническому развитию президиума Совета при Президенте Российской Федерации по модернизации экономики и инновационному развитию России, член Национального совета при Президенте Российской Федерации по профессиональным квалификациям, заместитель председателя Общественного совета при Ростехнадзоре.</p>
+                                    </div>
+                                </div>
+                                <div class="my-4">
+                                    <p class="text-secondary text-bold">Награды:</p>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item list-group-item-light border-warning">1981 – лауреат премии Совмина СССР;</li>
+                                        <li class="list-group-item list-group-item-light border-warning">1997, 1998, 2001, 2009 – лауреат премии Правительства России;</li>
+                                        <li class="list-group-item list-group-item-light border-warning">2003 – Лауреат Государственной премии;</li>
+                                        <li class="list-group-item list-group-item-light border-warning">1997 – лауреат Международной премии «Рентген-Соколов»;</li>
+                                        <li class="list-group-item list-group-item-light border-warning">2005 – орден Дружбы народов;</li>
+                                        <li class="list-group-item list-group-item-light border-warning">2011 – орден «За заслуги перед отечеством» IV степени.</li>
+                                    </ul>
+                                </div>
+                                <p>Н.П. Алёшин – автор 194 научных работ, из которых 15 монографии, 9 брошюр. Под его руководством защищено 30 кандидатских и 5 докторских диссертаций.</p>
+                                <p class="text-secondary text-bold">Под руководством Н. П. Алёшина и его непосредственном участии решены ряд фундаментальных проблем:</p>
+                                <ul class="text-secondary">
+                                    <li>Создана теория, технология и оборудование неразрушающего контроля сварных соединений строительных конструкций. Отличительной особенностью созданной технологии является возможность проведения ультразвукового контроля при высоте неровностей больше длины волны.</li>
+                                    <li>Развита теория дифракции упругих волн в твердотельном приближении для коротковолновых отражателей. Создание этой теории позволило разработать новые технологии диагностирования объектов различного назначения (газонефтепроводы, резервуары, космическая техника и др).</li>
+                                    <li>Сформулирована физическая модель и дано математическое описание акустосварочной модели крупнозернистых материалов. Это позволило вместе с ЦНИИ «Прометей» создать принципиально новую технологию диагностирования аустенитных сварных швов (судостроение, атомные электростанции).</li>
+                                    <li>Предложен и реализован метод решения задачи рассеяния акустического поля на групповых отражателях (метод вынесенных источников). Благодаря этому были разработаны алгоритмы идентификации одиночных и группы дефектов в сварных швах.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="english" role="tabpanel" aria-labelledby="english-tab">
+                            <div class="my-4">
+                                <div class="row align-items-center">
+                                    <div class="col-sm-3">
+                                        <img src="{% static 'images/alyoshin.jpg' %}" alt="Alyoshin" class="img-fluid">
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <p><strong>Nikolay Pavlovich Alyoshin</strong> – President of the National Agency of Welding Control, academician of the Russian Academy of Sciences (RAS), doctor of technical sciences, Professor, head of Department «Welding technology and Diagnostics» Bauman State Technical University. Russian scientist in the field of welding, honored worker of science and technology of the Russian Federation, head of section of Scientific-Technical Council Open joint-stock company Gazprom, Director of federal state autonomous institution scientific-educational center «Welding technology and control», a member of the Interdepartmental Commission on technical development of the Presidium of the Council under the President of the Russian Federation for economic modernization and innovative development of Russia, Member of the National Council under the President of the Russian Federation for professional qualifications, Deputy Chairman of the public Council at Rostehnadzor.</p>
+                                    </div>
+                                </div>
+                                <div class="my-4">
+                                    <p class="text-secondary text-bold">Awards:</p>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item list-group-item-light border-warning">1981 – the USSR Council of Ministers Prize Laureate;</li>
+                                        <li class="list-group-item list-group-item-light border-warning">1997, 1998, 2001, 2009 – the Russian Government Prize Laureate;</li>
+                                        <li class="list-group-item list-group-item-light border-warning">1997 – winner of the international premium «X-ray-Falcons»;</li>
+                                        <li class="list-group-item list-group-item-light border-warning">2003 – Laureate of the State Prize;</li>
+                                        <li class="list-group-item list-group-item-light border-warning">2005 – the order «Оf friendship of peoples»;</li>
+                                        <li class="list-group-item list-group-item-light border-warning">2007 – the order «For merits before fatherland» 4th degree.</li>
+                                    </ul>
+                                </div>
+                                <p>N. P. Alyoshin is the author of 194 scientific papers, 15 monographs, of which 9 booklets. Under his guidance protected candidate's 30 and 5 doctoral dissertations.</p>
+                                <p class="text-secondary text-bold">Under the direction of N. P. Alyoshin and his direct participation resolved a number of fundamental problems:</p>
+                                <ul class="text-secondary">
+                                    <li>Established theory, technology and equipment for NDT of weld joints of constructions. The distinctive feature of established technology is able to conduct ultrasonic testing of height of roughnesses of a longer wavelength.</li>
+                                    <li>Developed the theory of diffraction of elastic waves in solid-state shortwave approximation for the reflectors. This theory allowed the development of new technologies for the diagnosis of various purpose (gazonefteprovody, tanks, space technology etc).</li>
+                                    <li>Formulated a physical model and mathematical description of the model akustosvaročnoj coarse-grained materials. This allowed together with the Central Scientific Research Institute «Prometey» create fundamentally new technology for diagnosing of austenitic welds (shipbuilding, nuclear power plants).</li>
+                                    <li>Proposed and implemented a method of solving the problem of scattering of acoustic fields on group reflectors (method made by the sources). Thanks to this single identification algorithms were developed and a group of defects in welded seams.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr class="title-line mt-1 mb-4" align="left">
+                <a href="{% url 'home' %}" class="btn btn-primary mb-5"><i class="fas fa-arrow-left"></i> Назад</a>
+            </div>
+            <div class="col-lg-4 col-xl-3">
+                {% include 'journal/includes/home-content-right.html' %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

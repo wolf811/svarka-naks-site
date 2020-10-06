@@ -5,12 +5,13 @@
     <div class="container">
         <nav class="mb-5" aria-label="breadcrumb">
             <ol class="breadcrumb bg-transparent border-bottom ">
-                <li class="breadcrumb-item active" aria-current="page">Главная</li>
+                <li class="breadcrumb-item active"><a href="{% url 'home' %}">Главная</a></li>
+                <li class="breadcrumb-item" aria-current="page">Все новости</li>
             </ol>
         </nav>
         <div class="row">
             <div class="col-lg-8 col-xl-9">
-                <h2 class="text-color-journal">Новости</h2>
+                <h2 class="text-color-journal">Все новости</h2>
                 <hr class="title-line mb-4" align="left">
                 <div class="home-content-left">
                     <div class="row row-cols-1 row-cols-md-2">
@@ -81,7 +82,21 @@
                     </div>
                 </div>
                 <hr class="title-line mt-1 mb-4" align="left">
-                <a href="{% url 'post_list' %}" class="btn btn-primary mb-5">Все новости <i class="fas fa-arrow-right"></i></a>
+                <nav aria-label="...">
+                    <ul class="pagination pagination-primary">
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1" aria-disabled="true"><i class="fas fa-angle-double-left"></i></a>
+                        </li>
+                        <li class="page-item active" aria-current="page">
+                            <a class="page-link" href="#">1 <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#"><i class="fas fa-angle-double-right"></i></a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
             <div class="col-lg-4 col-xl-3">
                 {% include 'journal/includes/home-content-right.html' %}
