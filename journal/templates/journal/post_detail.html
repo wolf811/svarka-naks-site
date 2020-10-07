@@ -6,7 +6,7 @@
         <nav class="mb-5" aria-label="breadcrumb">
             <ol class="breadcrumb bg-transparent border-bottom ">
                 <li class="breadcrumb-item"><a href="{% url 'home' %}">Главная</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Новость подробнее</li>
+                <li class="breadcrumb-item active" aria-current="page">Новость детально</li>
             </ol>
         </nav>
         <div class="row">
@@ -24,7 +24,7 @@
                             </div>
                         </div>
                         <div class="col-sm-8">
-                            <p class="card-text">{{ post.text|linebreaksbr }}</p>
+                            {{ post.full_text|safe }}
                         </div>
                     </div>
                 </div>

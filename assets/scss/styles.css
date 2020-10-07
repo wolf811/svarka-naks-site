@@ -1,5 +1,6 @@
 body {
-  font-family: 'Montserrat', sans-serif !important; }
+  font-family: 'Montserrat', sans-serif !important;
+  color: #343a40; }
 
 .navbar-journal .container {
   position: relative; }
@@ -29,7 +30,10 @@ body {
     background-color: #ffc107; }
 
 .content {
-  background: url(../images/bg-content.jpg) no-repeat center;
+  background-image: url(../images/bg-content.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
   background-size: cover; }
   .content .breadcrumb {
     border-radius: 0; }

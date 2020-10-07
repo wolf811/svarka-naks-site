@@ -5,6 +5,7 @@ $color-warning: #ffc107;
 
 body {
     font-family: 'Montserrat', sans-serif !important;
+    color: #343a40;
 }
 
 
@@ -49,7 +50,10 @@ body {
 
 .content {
     // background: linear-gradient(to right bottom, #f7f5fb 50%, #fff 50%);
-    background: url(../images/bg-content.jpg) no-repeat center;
+    background-image: url(../images/bg-content.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
     background-size: cover;
 
     .breadcrumb {

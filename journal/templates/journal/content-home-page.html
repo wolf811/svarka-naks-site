@@ -1,0 +1,98 @@
+{% extends 'journal/base.html' %}
+{% load static %}
+{% block content %}
+<div class="content py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-xl-9">
+                <div class="row row-cols-1 row-cols-md-2">
+                    <div class="col mb-4">
+                        <div class="card h-100">
+                            <img src="{% static 'images/banner_welder.jpg' %}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-4">
+                        <div class="card h-100">
+                            <img src="{% static 'images/banner_welder.jpg' %}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a short card.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-4">
+                        <div class="card h-100">
+                            <img src="{% static 'images/banner_welder.jpg' %}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-4">
+                        <div class="card h-100">
+                            <img src="{% static 'images/banner_welder.jpg' %}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% for post in posts %}
+                <div class="post">
+                    <div class="date">
+                        {{ post.published_date }}
+                    </div>
+                    <h1><a href="">{{ post.title }}</a></h1>
+                    <p>{{ post.text|linebreaksbr }}</p>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="col-lg-4 col-xl-3">
+                <div class="home-right-content py-4 px-3">
+                    <div class="row">
+                        <div class="col-md-4 col-lg-auto">
+                            <div class="card text-white text-center border-warning mb-3 mb-sm-0 mb-lg-3 shadow">
+                                <img src="{% static 'images/img_journal.jpg' %}" class="card-img" alt="...">
+                                <div class="card-img-overlay">
+                                    <div class="card-overlay-content py-4">
+                                        <h5 class="card-title text-uppercase">Новый выпуск</h5>
+                                        <a href="#" class="btn btn-warning text-uppercase" target="_blank">Купить</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-lg-auto">
+                            <div class="card text-white text-center bg-warning mb-3 mb-sm-0 mb-lg-3 shadow">
+                                <div class="card-body">
+                                    <h5 class="card-title text-uppercase">Электронный архив</h5>
+                                    <p class="card-text text-uppercase text-dark">Электронные версии журналов "Сварка и диагностика"</p>
+                                </div>
+                                <div class="card-footer border-warning">
+                                    <a href="#" class="text-white font-weight-bold" target="_blank">Перейти в архив <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-lg-auto">
+                            <div class="card text-white text-center border-warning shadow">
+                                <img src="{% static 'images/banner_welder.jpg' %}" class="card-img w-100" alt="...">
+                                <div class="card-img-overlay">
+                                    <h5 class="card-title text-uppercase mt-5">Bewelder.ru</h5>
+                                    <p class="card-text text-uppercase text-warning my-4">Поиск работы в области сварки</p>
+                                    <a href="http://svarka.naks.ru/" target="_blank" class="btn btn-warning text-uppercase mb-md-3">Найти работу</a>
+                                    <a href="http://bewelder.ru/vacancy_detail?action=add&amp;id=0" target="_blank" class="btn btn-link text-white d-block">Разместить вакансию</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

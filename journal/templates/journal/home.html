@@ -68,7 +68,7 @@
                                         <p class="card-text card-text-date">{{ post.published_date }}</p>
                                         <hr align="left">
                                         <h6 class="card-title">{{ post.title }}</h6>
-                                        <p class="card-text truncate">{{ post.text|linebreaksbr }}</p>
+                                        <p class="card-text truncate">{{ post.short_text|safe }}</p>
                                         <div class="preview-bottom">
                                             <hr align="left">
                                             <a href="{% url 'post_detail' pk=post.pk %}" class="btn btn-outline-primary btn-sm">Подробнее <i class="fas fa-arrow-right"></i></a>

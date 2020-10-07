@@ -20,16 +20,16 @@
                             <a class="nav-link" href="{% url 'journal_info' %}">О&nbsp;журнале</a>
                             <a class="nav-link" href="{% url 'journal_founders' %}">Учредители</a>
                             <a class="nav-link" href="{% url 'journal_collegium' %}">Редакционная коллегия</a>
-                            <a class="nav-link" href="#">Порядок рецензирования</a>
+                            <a class="nav-link" href="{% url 'journal_recentering' %}">Порядок рецензирования</a>
                         </nav>
                     </div>
                     <div class="col-sm">
                         <nav class="nav flex-column">
-                            <a class="nav-link" href="#">Авторам</a>
-                            <a class="nav-link" href="#">Архив номеров</a>
-                            <a class="nav-link" href="#">Подписка</a>
-                            <a class="nav-link" href="#">Реклама</a>
-                            <a class="nav-link" href="#">Контакты</a>
+                            <a class="nav-link" href="{% url 'authors' %}">Авторам</a>
+                            <a class="nav-link" href="{% url 'archive' %}">Архив номеров</a>
+                            <a class="nav-link" href="{% url 'subscription' %}">Подписка</a>
+                            <a class="nav-link" href="{% url 'advertising' %}">Реклама</a>
+                            <a class="nav-link" href="{% url 'contacts' %}">Контакты</a>
                         </nav>
                     </div>
                 </div>

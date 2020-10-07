@@ -33,23 +33,23 @@
                             <a class="dropdown-item" href="{% url 'journal_info' %}">О журнале</a>
                             <a class="dropdown-item" href="{% url 'journal_founders' %}">Учредители</a>
                             <a class="dropdown-item" href="{% url 'journal_collegium' %}">Редакционная коллегия</a>
-                            <a class="dropdown-item" href="#">Порядок рецензирования</a>
+                            <a class="dropdown-item" href="{% url 'journal_recentering' %}">Порядок рецензирования</a>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Авторам</a>
+                        <a class="nav-link" href="{% url 'authors' %}">Авторам</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Архив</a>
+                        <a class="nav-link" href="{% url 'archive' %}">Архив</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Подписка</a>
+                        <a class="nav-link" href="{% url 'subscription' %}">Подписка</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Реклама</a>
+                        <a class="nav-link" href="{% url 'advertising' %}">Реклама</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Контакты</a>
+                        <a class="nav-link" href="{% url 'contacts' %}">Контакты</a>
                     </li>
                 </ul>
                 <form class="my-2 my-lg-0 mx-auto">

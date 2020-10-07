@@ -5,8 +5,8 @@
     <div class="container">
         <nav class="mb-5" aria-label="breadcrumb">
             <ol class="breadcrumb bg-transparent border-bottom ">
-                <li class="breadcrumb-item active"><a href="{% url 'home' %}">Главная</a></li>
-                <li class="breadcrumb-item" aria-current="page">Все новости</li>
+                <li class="breadcrumb-item"><a href="{% url 'home' %}">Главная</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Все новости</li>
             </ol>
         </nav>
         <div class="row">
@@ -69,7 +69,7 @@
                                         <p class="card-text card-text-date">{{ post.published_date }}</p>
                                         <hr align="left">
                                         <h6 class="card-title">{{ post.title }}</h6>
-                                        <p class="card-text truncate">{{ post.text|linebreaksbr }}</p>
+                                        <p class="card-text truncate">{{ post.short_text|safe }}</p>
                                         <div class="preview-bottom">
                                             <hr align="left">
                                             <a href="{% url 'post_detail' pk=post.pk %}" class="btn btn-outline-primary btn-sm">Подробнее <i class="fas fa-arrow-right"></i></a>
