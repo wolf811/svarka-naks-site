@@ -169,6 +169,31 @@ body {
     }
 }
 
+.card-overlay {
+    .card-img-overlay {
+        background-color: rgba(16, 49, 66, 0.6);
+        // background-color: rgba(198, 198, 198, 0.5);
+        padding: 0;
+
+        &:hover {
+            background-color: transparent;
+            transition: 0.3s;
+        }
+
+        .card-overlay-content {
+            background-color: rgba(16, 49, 66, 0.9);
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+        }
+    }
+
+    &:hover {
+        box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, .5) !important;
+        transition: 0.3s;
+    }
+}
+
 .jumbotron {
     color: #fff;
     background: #f7ae2d;
