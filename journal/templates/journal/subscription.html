@@ -14,22 +14,65 @@
                 <h2 class="text-color-journal">Подписка</h2>
                 <hr class="title-line mb-4" align="left">
                 <div class="content-left mb-4">
-                    <p>Уважаемые Читатели!<br>Вы можете оформить подписку на журнал «Сварка и Диагностика» на 2020 год. </p>
-                    <div class="alert alert-light shadow-sm">
-                        <h5>Подписка на бумажный Журнал "Сварка и Диагностика"</h5>
-                        <p>Позвоните нам по телефону в Москве +7 499 346 0 345 для оформления подписки на бумажный журнал "Сварка и Диагностика"</p>
-                        <h5>Стоимость бумажных выпусков журналов "Сварка и Диагностика" </h5>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Cras justo odio</li>
-                            <li class="list-group-item">Dapibus ac facilisis in</li>
-                            <li class="list-group-item">Morbi leo risus</li>
-                            <li class="list-group-item">Porta ac consectetur ac</li>
-                            <li class="list-group-item">Vestibulum at eros</li>
-                        </ul>
+                    <div class="alert alert-warning">
+                        <h5 class="mb-3"><strong>Уважаемые Читатели!</strong><br>Вы можете оформить подписку на журнал «Сварка и Диагностика» на 2020 год.</h5>
+                        <p>Для оформления подписки на бумажный журнал "Сварка и Диагностика" позвоните нам по телефону в Москве <strong>+7 (499) 346-0-345</strong></p>
+                        <p class="mb-0">Также подписку можно оформить в любом отделении почтовой связи по всей стране с любого месяца. Подписной индекс в каталоге Агентства «Роспечать» 82105.</p>
+                    </div>
+                    <div class="alert alert-light shadow">
+                        <h5 class="text-dark mb-3">Стоимость <strong>бумажных</strong> выпусков журналов "Сварка и Диагностика"</h5>
+                        <table class="table">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th scope="col">Описание</th>
+                                    <th scope="col">1 экз. выпуска журнала, руб./шт.</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td scope="row">Один номер журнала 2020 <span class="text-danger">*</span></td>
+                                    <td>1400</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">Подписка на полугодие (3 номера)</td>
+                                    <td>4000</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">Подписка на год (6 номеров)</td>
+                                    <td>7400</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <small class="text-muted"><span class="text-danger">*</span> - прием заявок на приобретение бумажных номеров журнала осуществляется до 15-го числа каждого четного месяца.</small>
+                    </div>
+                    <div class="alert alert-light shadow">
+                        <h5 class="text-dark mb-3">Стоимость <strong>электронных</strong> выпусков журналов "Сварка и Диагностика"</h5>
+                        <table class="table">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th scope="col">Описание</th>
+                                    <th scope="col">1 экз. выпуска журнала, руб./шт.</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td scope="row">Один номер электронного журнала 2020</td>
+                                    <td>1250</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">Один номер электронного журнала 2018, 2019</td>
+                                    <td>1000</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">Один номер электронного журнала 2013- 2017</td>
+                                    <td>600</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
                 <hr class="title-line mt-1 mb-4" align="left">
-                <!-- <a href="{% url 'home' %}" class="btn btn-primary mb-5"><i class="fas fa-arrow-left"></i> Назад</a> -->
+                <a href="{% url 'archive' %}" class="btn btn-primary mb-5">Перейти в Архив номеров <i class="fas fa-arrow-right"></i></a>
             </div>
             <div class="col-lg-4 col-xl-3">
                 {% include 'journal/includes/home-content-right.html' %}
