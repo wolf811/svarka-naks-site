@@ -101,3 +101,24 @@ def contacts(request):
 		'title': title
 	}
 	return render(request, 'journal/contacts.html', content)
+
+def basket(request):
+	title = 'Корзина'
+	content = {
+		'title': title
+	}
+	return render(request, 'journal/basket.html', content)
+
+def user_profile(request):
+	title = 'Личный кабинет'
+	content = {
+		'title': title
+	}
+	return render(request, 'journal/user_profile.html', content)
+
+def user_subscriptions(request):
+	title = 'Личный кабинет'
+	content = {
+		'title': title
+	}
+	return render(request, 'journal/user_subscriptions.html', content)

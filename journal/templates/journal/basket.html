@@ -1,0 +1,120 @@
+{% extends 'journal/base.html' %}
+{% load static %}
+{% block content %}
+<div class="content py-5">
+    <div class="container">
+        <nav class="mb-5" aria-label="breadcrumb">
+            <ol class="breadcrumb bg-transparent border-bottom ">
+                <li class="breadcrumb-item"><a href="{% url 'home' %}">Главная</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Корзина</li>
+            </ol>
+        </nav>
+        <div class="row">
+            <div class="col-lg-8 col-xl-9">
+                <h2 class="text-color-journal">Корзина</h2>
+                <hr class="title-line mb-4" align="left">
+                <div class="content-left mb-4">
+                    <div class="empty-basket" style="display: none;">
+                        <h4>Ваша корзина пуста.</h4>
+                    </div>
+                    <form>
+                        <div class="alert alert-light shadow text-dark">
+                            <h4>Выбранные номера</h4>
+                            <hr>
+                            <div class="row align-items-center">
+                                <div class="col-sm-6">
+                                    <h6 class="mb-3 mb-sm-0">Электронная версия журнала "Сварка и диагностика" №4-2020<br><small><a href="#" target="_blank">Содержание</a></small></h6>
+                                </div>
+                                <div class="col-6 col-sm-3">
+                                    <div class="input-group input-group-sm">
+                                        <div class="input-group-prepend">
+                                            <button class="btn btn-outline-secondary" type="button" id="button-addon1" disabled=""><i class="fas fa-minus" aria-hidden="true"></i></button>
+                                        </div>
+                                        <input type="text" class="form-control text-center" value="12">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i class="fas fa-plus" aria-hidden="true"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-4 col-sm-2">
+                                    <h6 class="mx-auto mb-0">15000 руб.</h6>
+                                </div>
+                                <div class="col-2 col-sm-1 text-right">
+                                    <button class="btn btn-outline-warning btn-sm" title="удалить"><i class="fas fa-times"></i></button>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row align-items-center">
+                                <div class="col-sm-6">
+                                    <h6 class="mb-3 mb-sm-0">Электронная версия журнала "Сварка и диагностика" №4-2020<br><small><a href="#" target="_blank">Содержание</a></small></h6>
+                                </div>
+                                <div class="col-6 col-sm-3">
+                                    <div class="input-group input-group-sm">
+                                        <div class="input-group-prepend">
+                                            <button class="btn btn-outline-secondary" type="button" id="button-addon1" disabled=""><i class="fas fa-minus" aria-hidden="true"></i></button>
+                                        </div>
+                                        <input type="text" class="form-control text-center" value="1">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i class="fas fa-plus" aria-hidden="true"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-4 col-sm-2">
+                                    <h6 class="mx-auto mb-0">1250 руб.</h6>
+                                </div>
+                                <div class="col-2 col-sm-1 text-right">
+                                    <button class="btn btn-outline-warning btn-sm" title="удалить"><i class="fas fa-times"></i></button>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row align-items-center">
+                                <div class="col-6 col-sm-9">
+                                    <p class="mb-0">Итого:</p>
+                                </div>
+                                <div class="col col-sm-3">
+                                    <h6 class="text-bold mx-auto mb-0">16250 руб.</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="alert alert-light shadow text-dark">
+                            <h4>Оформление заказа</h4>
+                            <hr>
+                            <div class="px-sm-5">
+                                <div class="form-group">
+                                    <label for="name">Имя</label>
+                                    <input type="text" class="form-control" id="name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="surname">Фамилия</label>
+                                    <input type="text" class="form-control" id="surname">
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Телефон</label>
+                                    <input type="text" class="form-control" id="phone" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="text" class="form-control" id="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="comment">Комментарии к заказу</label>
+                                    <textarea class="form-control" id="comment" rows="3"></textarea>
+                                </div>
+                                <div class="form-group form-check">
+                                    <input type="checkbox" class="form-check-input" id="confCheck2" checked required>
+                                    <label class="form-check-label" for="confCheck2">Согласен на обработку ПДн</label>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-warning">Оформить</button>
+                    </form>
+                </div>
+                <hr class="title-line mt-1 mb-4" align="left">
+            </div>
+            <div class="col-lg-4 col-xl-3">
+                {% include 'journal/includes/home-content-right.html' %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

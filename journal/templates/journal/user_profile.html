@@ -1,0 +1,63 @@
+{% extends 'journal/base.html' %}
+{% load static %}
+{% block content %}
+<div class="content py-5">
+    <div class="container">
+        <nav class="mb-5" aria-label="breadcrumb">
+            <ol class="breadcrumb bg-transparent border-bottom ">
+                <li class="breadcrumb-item"><a href="{% url 'home' %}">Главная</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Личный кабинет</li>
+            </ol>
+        </nav>
+        <div class="row">
+            <div class="col-lg-8 col-xl-9">
+                <h2 class="text-color-journal">Личный кабинет</h2>
+                <hr class="title-line mb-4" align="left">
+                <div class="content-left mb-4">
+                    <ul class="nav nav-tabs my-4">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="{% url 'user_profile' %}">Мой профиль</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'user_subscriptions' %}">Подписки</a>
+                        </li>
+                    </ul>
+                    <form>
+                        <div class="alert alert-light shadow text-dark">
+                            <form>
+                                <fieldset class="px-sm-5" disabled>
+                                    <div class="form-group">
+                                        <label for="name">Имя</label>
+                                        <input type="text" class="form-control" id="name" value="Иванов">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="surname">Фамилия</label>
+                                        <input type="text" class="form-control" id="surname" value="Василий">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="phone">Телефон</label>
+                                        <input type="text" class="form-control" id="phone" required value="89032588545">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">Email</label>
+                                        <input type="text" class="form-control" id="email" required value="ivanov@mail.com">
+                                    </div>
+                                    <div class="form-group form-check">
+                                        <input type="checkbox" class="form-check-input" id="confCheck2" checked required>
+                                        <label class="form-check-label" for="confCheck2">Согласен на обработку ПДн</label>
+                                    </div>
+                                </fieldset>
+                                <button type="submit" class="btn btn-warning">Изменить</button>
+                            </form>
+                        </div>
+                    </form>
+                </div>
+                <hr class="title-line mt-1 mb-4" align="left">
+            </div>
+            <div class="col-lg-4 col-xl-3">
+                {% include 'journal/includes/home-content-right.html' %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

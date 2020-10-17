@@ -3,7 +3,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="zakazModalTitle">Сварка и диагностика №4-2020</h5>
+                <h5 class="modal-title" id="zakazModalTitle">Оформление заказа</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -11,7 +11,7 @@
             <form id="formZakaz">
                 <div class="modal-body">
                     <div class="px-lg-5">
-                        <h5 class="text-secondary mb-3"><i class="fas fa-check text-warning"></i> Ваш заказ в корзине</h5>
+                        <h6 class="mb-3">Электронный журнал "Сварка и диагностика" №4-2020</h6>
                         <div class="row align-items-center">
                             <div class="col-sm-4">
                                 <img src="{% static 'images/img_journal.jpg' %}" alt="" class="img-fluid mb-4 mb-sm-0">
@@ -35,8 +35,8 @@
                 </div>
                 <div class="modal-footer">
                     <div class="px-sm-5">
-                        <!-- <button type="submit" class="btn btn-warning"><i class="fas fa-sign-in-alt"></i> Войти</button> -->
-                        <button type="button" class="btn btn-warning" id="btnConfirmLogin">Оформить <i class="fas fa-arrow-right"></i></button>
+                        <!-- <button type="submit" class="btn btn-warning" id="btnConfirmLogin">Оформить <i class="fas fa-arrow-right"></i></button> -->
+                        <a href="{% url 'basket' %}" class="btn btn-warning" id="btnConfirmLogin">В корзину <i class="fas fa-arrow-right"></i></a>
                         <a href="#" class="btn btn-outline-warning text-dark" data-dismiss="modal">Отмена</a>
                     </div>
                 </div>

@@ -2,7 +2,7 @@ from django.urls import path, include
 from . import views
 
 urlpatterns = [
-    path('', views.home, name='home'),
+    path('home', views.home, name='home'),
     path('post_list', views.post_list, name='post_list'),
     path('post/<int:pk>/', views.post_detail, name='post_detail'),
     path('journal_info', views.journal_info, name='journal_info'),
@@ -15,5 +15,8 @@ urlpatterns = [
     path('subscription', views.subscription, name='subscription'),
     path('advertising', views.advertising, name='advertising'),
     path('contacts', views.contacts, name='contacts'),
+    path('basket', views.basket, name='basket'),
+    path('user_profile', views.user_profile, name='user_profile'),
+    path('user_subscriptions', views.user_subscriptions, name='user_subscriptions'),
     path('ckeditor/', include('ckeditor_uploader.urls')),
 ]
