@@ -29,6 +29,11 @@ body {
 
     }
 
+    .dropdown-item.active,
+    .dropdown-item:active {
+        color: inherit;
+        background-color: $color-warning;
+    }
 
     .dropdown-header {
         color: $color-journal;

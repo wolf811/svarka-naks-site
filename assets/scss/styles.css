@@ -14,6 +14,11 @@ body {
   .navbar-journal .navbar-icon-right .dropdown-toggle::after {
     display: none; }
 
+.navbar-journal .dropdown-item.active,
+.navbar-journal .dropdown-item:active {
+  color: inherit;
+  background-color: #ffc107; }
+
 .navbar-journal .dropdown-header {
   color: #36529d;
   font-weight: bold;
