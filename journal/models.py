@@ -11,6 +11,7 @@ class Post(models.Model):
     full_text = RichTextUploadingField(verbose_name='Полный текст', blank=True, null=True)
     created_date = models.DateTimeField(verbose_name='Дата создания', default=timezone.now)
     published_date = models.DateTimeField(verbose_name='Дата публикации', blank=True, null=True)
+    img = models.ImageField(upload_to='images/', verbose_name='Добавить фото', null=True, blank=True)
 
     def publish(self):
         self.published_date = timezone.now()

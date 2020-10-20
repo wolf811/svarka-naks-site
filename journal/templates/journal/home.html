@@ -62,7 +62,7 @@
                         {% for post in posts %}
                         <div class="col mb-4">
                             <div class="card shadow-sm">
-                                <img src="{% static 'images/bg-content1.jpg' %}" class="card-img">
+                                <img src="{{ post.img }}" class="card-img">
                                 <div class="card-img-overlay">
                                     <div class="preview">
                                         <p class="card-text card-text-date">{{ post.published_date }}</p>
