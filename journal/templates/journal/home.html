@@ -15,8 +15,7 @@
                 <div class="home-content-left">
                     <div class="row row-cols-1 row-cols-md-2">
                         <div class="col mb-4">
-                            <div class="card shadow-sm">
-                                <img src="{% static 'images/bg-content1.jpg' %}" class="card-img">
+                            <div class="card card-post shadow-sm">
                                 <div class="card-img-overlay">
                                     <div class="preview">
                                         <p class="card-text card-text-date">26.08.2020</p>
@@ -29,8 +28,7 @@
                             </div>
                         </div>
                         <div class="col mb-4">
-                            <div class="card shadow-sm">
-                                <img src="{% static 'images/bg-content1.jpg' %}" class="card-img">
+                            <div class="card card-post shadow-sm">
                                 <div class="card-img-overlay">
                                     <div class="preview">
                                         <p class="card-text card-text-date">25.08.2020</p>
@@ -46,8 +44,7 @@
                             </div>
                         </div>
                         <div class="col mb-4">
-                            <div class="card shadow-sm">
-                                <img src="{% static 'images/bg-content1.jpg' %}" class="card-img">
+                            <div class="card card-post shadow-sm">
                                 <div class="card-img-overlay">
                                     <div class="preview">
                                         <p class="card-text card-text-date">09.07.2020</p>
@@ -61,13 +58,14 @@
                         </div>
                         {% for post in posts %}
                         <div class="col mb-4">
-                            <div class="card shadow-sm">
-                                <img src="{{ post.img }}" class="card-img">
+                            <div class="card card-post shadow-sm">
                                 <div class="card-img-overlay">
                                     <div class="preview">
                                         <p class="card-text card-text-date">{{ post.published_date }}</p>
                                         <hr align="left">
                                         <h6 class="card-title">{{ post.title }}</h6>
+                                        <!-- <a href="#" class="btn btn-outline-primary btn-sm mb-3" target="_blank"><i class="fas fa-external-link-alt"></i> Открыть содержание</a> -->
+                                        <!-- <img src="{{ post.img.url }}" class="img-fluid"> -->
                                         <p class="card-text truncate">{{ post.short_text|safe }}</p>
                                         <div class="preview-bottom">
                                             <hr align="left">

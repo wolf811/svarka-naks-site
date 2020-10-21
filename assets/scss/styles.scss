@@ -175,6 +175,14 @@ body {
         }
 
     }
+
+    .card-post {
+        background-image: url(../images/bg-content1.jpg);
+        background-repeat: no-repeat;
+        // background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+    }
 }
 
 .home-content-right {

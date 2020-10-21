@@ -20,7 +20,7 @@
                             <p class="text-secondary">{{ post.published_date }}</p>
                             {% endif %}
                             <div class="mb-3 mb-md-0">
-                                <img src="{% static 'images/conf.jpg' %}" alt="" class="img-fluid">
+                                <img src="{{ post.img.url }}" alt="" class="img-fluid">
                             </div>
                         </div>
                         <div class="col-sm-8">
