@@ -14,7 +14,7 @@
                 <hr class="title-line mb-4" align="left">
                 <div class="home-content-left">
                     <div class="row row-cols-1 row-cols-md-2">
-                        <div class="col mb-4">
+                        <!-- <div class="col mb-4">
                             <div class="card card-post shadow-sm">
                                 <div class="card-img-overlay">
                                     <div class="preview">
@@ -55,7 +55,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         {% for post in posts %}
                         <div class="col mb-4">
                             <div class="card card-post shadow-sm">
@@ -64,13 +64,19 @@
                                         <p class="card-text card-text-date">{{ post.published_date }}</p>
                                         <hr align="left">
                                         <h6 class="card-title">{{ post.title }}</h6>
-                                        <!-- <a href="#" class="btn btn-outline-primary btn-sm mb-3" target="_blank"><i class="fas fa-external-link-alt"></i> Открыть содержание</a> -->
-                                        <!-- <img src="{{ post.img.url }}" class="img-fluid"> -->
+                                        {% if post.img_journal %}
+                                        <a href="#" class="btn btn-outline-primary btn-sm mb-3" target="_blank"><i class="fas fa-external-link-alt"></i> Открыть содержание</a>
+                                        <img src="{{ post.img_journal.url }}" class="img-fluid">
+                                        {% else %}
                                         <p class="card-text truncate">{{ post.short_text|safe }}</p>
+                                        <img src="{{ post.img.url }}" class="img-fluid">
+                                        {% endif %}
+                                        {% if post.full_text|safe %}
                                         <div class="preview-bottom">
                                             <hr align="left">
                                             <a href="{% url 'post_detail' pk=post.pk %}" class="btn btn-outline-primary btn-sm">Подробнее <i class="fas fa-arrow-right"></i></a>
                                         </div>
+                                        {% endif %}
                                     </div>
                                 </div>
                             </div>

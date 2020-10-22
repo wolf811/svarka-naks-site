@@ -12,11 +12,17 @@ class Post(models.Model):
     created_date = models.DateTimeField(verbose_name='Дата создания', default=timezone.now)
     published_date = models.DateTimeField(verbose_name='Дата публикации', blank=True, null=True)
     img = models.ImageField(upload_to='images/', verbose_name='Добавить фото', null=True, blank=True)
+    img_journal = models.ImageField(upload_to='images/', verbose_name='Добавить фото журнала', null=True, blank=True)
 
-    # @property
-    # def img_url(self):
-    #     if self.img and hasattr(self.img, 'url'):
-    #         return self.img.url
+    @property
+    def img_url(self):
+        if self.img and hasattr(self.img, 'url'):
+            return self.img.url
+
+    @property
+    def img_journal_url(self):
+        if self.img_journal and hasattr(self.img_journal, 'url'):
+            return self.img_journal.url
 
     def publish(self):
         self.published_date = timezone.now()
