@@ -15,61 +15,27 @@
                 <hr class="title-line mb-4" align="left">
                 <div class="home-content-left">
                     <div class="row row-cols-1 row-cols-md-2">
-                        <div class="col mb-4">
-                            <div class="card card-post shadow-sm">
-                                <div class="card-img-overlay">
-                                    <div class="preview">
-                                        <p class="card-text card-text-date">26.08.2020</p>
-                                        <hr align="left">
-                                        <h6 class="card-title">Новый номер Журнала "Сварка и Диагностика" №4-2020</h6>
-                                        <a href="#" class="btn btn-outline-primary btn-sm mb-3" target="_blank"><i class="fas fa-external-link-alt"></i> Открыть содержание</a>
-                                        <img src="{% static 'images/img_journal.jpg' %}" class="img-fluid">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col mb-4">
-                            <div class="card card-post shadow-sm">
-                                <div class="card-img-overlay">
-                                    <div class="preview">
-                                        <p class="card-text card-text-date">25.08.2020</p>
-                                        <hr align="left">
-                                        <h6 class="card-title">25-летие научно-производственной компании Шторм</h6>
-                                        <img src="{% static 'images/25storm.png' %}" class="img-fluid">
-                                        <div class="preview-bottom">
-                                            <hr align="left">
-                                            <a href="#" class="btn btn-outline-primary btn-sm">Подробнее <i class="fas fa-arrow-right"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col mb-4">
-                            <div class="card card-post shadow-sm">
-                                <div class="card-img-overlay">
-                                    <div class="preview">
-                                        <p class="card-text card-text-date">09.07.2020</p>
-                                        <hr align="left">
-                                        <h6 class="card-title">Новый номер Журнала "Сварка и Диагностика" №3-2020</h6>
-                                        <a href="#" class="btn btn-outline-primary btn-sm mb-3" target="_blank"><i class="fas fa-external-link-alt"></i> Открыть содержание</a>
-                                        <img src="{% static 'images/img_journal.jpg' %}">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                         {% for post in posts %}
                         <div class="col mb-4">
                             <div class="card card-post shadow-sm">
                                 <div class="card-img-overlay">
                                     <div class="preview">
-                                        <p class="card-text card-text-date">{{ post.published_date }}</p>
+                                        <p class="card-text card-text-date">{{ post.published_date|date:"d E Y" }}</p>
                                         <hr align="left">
                                         <h6 class="card-title">{{ post.title }}</h6>
+                                        {% if post.img_journal %}
+                                        <a href="#" class="btn btn-outline-primary btn-sm mb-3" target="_blank"><i class="fas fa-external-link-alt"></i> Открыть содержание</a>
+                                        <img src="{{ post.img_journal.url }}" class="img-fluid">
+                                        {% else %}
                                         <p class="card-text truncate">{{ post.short_text|safe }}</p>
+                                        {% if not post.short_text|safe %} <img src="{{ post.img.url }}" class="img-fluid"> {% endif %}
+                                        {% if post.full_text|safe %}
                                         <div class="preview-bottom">
                                             <hr align="left">
                                             <a href="{% url 'post_detail' pk=post.pk %}" class="btn btn-outline-primary btn-sm">Подробнее <i class="fas fa-arrow-right"></i></a>
                                         </div>
+                                        {% endif %}
+                                        {% endif %}
                                     </div>
                                 </div>
                             </div>

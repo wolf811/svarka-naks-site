@@ -16,9 +16,7 @@
                 <div class="content-left mb-4">
                     <div class="row align-items-stretch">
                         <div class="col-sm-4">
-                            {% if post.published_date %}
-                            <p class="text-secondary">{{ post.published_date }}</p>
-                            {% endif %}
+                            <p class="text-secondary">{{ post.published_date|date:"d E Y" }}</p>
                             <div class="mb-3 mb-md-0">
                                 <img src="{{ post.img.url }}" alt="" class="img-fluid">
                             </div>

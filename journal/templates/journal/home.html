@@ -61,7 +61,7 @@
                             <div class="card card-post shadow-sm">
                                 <div class="card-img-overlay">
                                     <div class="preview">
-                                        <p class="card-text card-text-date">{{ post.published_date }}</p>
+                                        <p class="card-text card-text-date">{{ post.published_date|date:"d E Y" }}</p>
                                         <hr align="left">
                                         <h6 class="card-title">{{ post.title }}</h6>
                                         {% if post.img_journal %}
@@ -69,13 +69,13 @@
                                         <img src="{{ post.img_journal.url }}" class="img-fluid">
                                         {% else %}
                                         <p class="card-text truncate">{{ post.short_text|safe }}</p>
-                                        <img src="{{ post.img.url }}" class="img-fluid">
-                                        {% endif %}
+                                        {% if not post.short_text|safe %} <img src="{{ post.img.url }}" class="img-fluid"> {% endif %}
                                         {% if post.full_text|safe %}
                                         <div class="preview-bottom">
                                             <hr align="left">
                                             <a href="{% url 'post_detail' pk=post.pk %}" class="btn btn-outline-primary btn-sm">Подробнее <i class="fas fa-arrow-right"></i></a>
                                         </div>
+                                        {% endif %}
                                         {% endif %}
                                     </div>
                                 </div>
