@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.utils import timezone
-from .models import Post
+from .models import Post, Category, Product
 from django.shortcuts import render, get_object_or_404
 
 def home(request):
@@ -74,10 +74,20 @@ def authors(request):
 	}
 	return render(request, 'journal/authors.html', content)
 
-def archive(request):
+def archive(request, category_slug=None):
 	title = 'Архив номеров'
+	category = None
+	categories = Category.objects.all()
+	# products = Product.objects.filter(available=True)
+	products = Product.objects.filter()
+	if category_slug:
+		category = get_object_or_404(Category, slug=category_slug)
+		products = products.filter(category=category)
 	content = {
-		'title': title
+		'title': title,
+		'category': category,
+		'categories': categories,
+		'products': products
 	}
 	return render(request, 'journal/archive.html', content)
 
