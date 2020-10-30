@@ -2,6 +2,7 @@ from django.conf import settings
 from ckeditor_uploader.fields import RichTextUploadingField
 from django.db import models
 from django.utils import timezone
+from django.urls import reverse
 
 # Create your models here.
 class Post(models.Model):
@@ -44,6 +45,9 @@ class Category(models.Model):
     def __str__(self):
         return self.name
 
+    # def get_absolute_url(self):
+    #     return reverse('journal:archive_by_category',
+    #                     args=[self.slug])
 
 class Product(models.Model):
     category = models.ForeignKey(Category, related_name='products', on_delete=models.CASCADE)
@@ -51,10 +55,7 @@ class Product(models.Model):
     slug = models.SlugField(max_length=200, db_index=True)
     image = models.ImageField(upload_to='products/', blank=True)
     file_contents = models.FileField(upload_to='products/', verbose_name='Добавить файл содержания', null=True, blank=True)
-    description = models.TextField(blank=True)
     price = models.DecimalField(max_digits=10, decimal_places=0)
-    # stock = models.PositiveIntegerField()
-    # available = models.BooleanField(default=True)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
 

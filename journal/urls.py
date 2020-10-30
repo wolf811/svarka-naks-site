@@ -3,6 +3,7 @@ from django.urls import path, include
 from . import views
 from django.conf.urls.static import static
 from django.conf import settings
+from django.conf.urls import url
 
 urlpatterns = [
     # path('admin/', admin.site.urls),
@@ -16,6 +17,7 @@ urlpatterns = [
     path('alyoshin/', views.alyoshin, name='alyoshin'),
     path('authors/', views.authors, name='authors'),
     path('archive/', views.archive, name='archive'),
+    # path('archive/<category_slug>/', views.archive, name='archive_by_category'),
     path('subscription/', views.subscription, name='subscription'),
     path('advertising/', views.advertising, name='advertising'),
     path('contacts/', views.contacts, name='contacts'),
