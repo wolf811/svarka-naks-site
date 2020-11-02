@@ -77,8 +77,8 @@ def authors(request):
 def archive(request, category_slug=None):
 	title = 'Архив номеров'
 	category = None
-	categories = Category.objects.all()
-	categories = Category.objects.filter()
+	categories = Category.objects.all().order_by('num')
+	categories = Category.objects.filter().order_by('num')
 	products = Product.objects.filter()
 	if category_slug:
 		category = get_object_or_404(Category, slug=category_slug)

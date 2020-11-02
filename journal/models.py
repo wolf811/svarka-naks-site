@@ -36,6 +36,7 @@ class Post(models.Model):
 class Category(models.Model):
     name = models.CharField(max_length=200, db_index=True)
     slug = models.SlugField(max_length=200, db_index=True, unique=True)
+    num = models.SmallIntegerField(verbose_name='Порядок вывода', blank=True, null=True, default=0)
 
     class Meta:
         ordering = ('name',)
@@ -50,7 +51,7 @@ class Category(models.Model):
     #                     args=[self.slug])
 
 class Product(models.Model):
-    category = models.ForeignKey(Category, related_name='products', on_delete=models.CASCADE)
+    category = models.ForeignKey(Category, related_name='products', null=True, blank=True, on_delete=models.SET_NULL)
     name = models.CharField(max_length=200, db_index=True)
     slug = models.SlugField(max_length=200, db_index=True)
     image = models.ImageField(upload_to='products/', blank=True)
