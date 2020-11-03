@@ -51,6 +51,7 @@ class Category(models.Model):
     #                     args=[self.slug])
 
 class Product(models.Model):
+    # category = models.OneToOneField(Category, related_name='products', on_delete=models.CASCADE, primary_key = True)
     category = models.ForeignKey(Category, related_name='products', null=True, blank=True, on_delete=models.SET_NULL)
     name = models.CharField(max_length=200, db_index=True)
     slug = models.SlugField(max_length=200, db_index=True)
@@ -59,6 +60,7 @@ class Product(models.Model):
     price = models.DecimalField(max_digits=10, decimal_places=0)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
+    public = models.BooleanField(u'Опубликовать', default = True)
 
     class Meta:
         ordering = ('name',)
