@@ -19,7 +19,7 @@
                     </div>
                     <form>
                         <div class="alert alert-light shadow text-dark">
-                            <h4>Выбранные номера</h4>
+                            <h4>Оформление заказа</h4>
                             <hr>
                             <div class="row align-items-center">
                                 <div class="col-sm-6">
@@ -40,7 +40,7 @@
                                     <h6 class="mx-auto mb-0">15000 руб.</h6>
                                 </div>
                                 <div class="col-2 col-sm-1 text-right">
-                                    <button class="btn btn-outline-warning btn-sm" title="удалить"><i class="fas fa-times"></i></button>
+                                    <button class="btn btn-outline-warning text-secondary btn-sm" title="удалить"><i class="fas fa-times"></i></button>
                                 </div>
                             </div>
                             <hr>
@@ -63,11 +63,11 @@
                                     <h6 class="mx-auto mb-0">1250 руб.</h6>
                                 </div>
                                 <div class="col-2 col-sm-1 text-right">
-                                    <button class="btn btn-outline-warning btn-sm" title="удалить"><i class="fas fa-times"></i></button>
+                                    <button class="btn btn-outline-warning text-secondary btn-sm" title="удалить"><i class="fas fa-times"></i></button>
                                 </div>
                             </div>
                             <hr>
-                            <div class="row align-items-center">
+                            <div class="row align-items-center mb-3">
                                 <div class="col-6 col-sm-9">
                                     <p class="mb-0">Итого:</p>
                                 </div>
@@ -75,38 +75,136 @@
                                     <h6 class="text-bold mx-auto mb-0">16250 руб.</h6>
                                 </div>
                             </div>
-                        </div>
-                        <div class="alert alert-light shadow text-dark">
-                            <h4>Оформление заказа</h4>
-                            <hr>
-                            <div class="px-sm-5">
-                                <div class="form-group">
-                                    <label for="name">Имя</label>
-                                    <input type="text" class="form-control" id="name">
-                                </div>
-                                <div class="form-group">
-                                    <label for="surname">Фамилия</label>
-                                    <input type="text" class="form-control" id="surname">
-                                </div>
-                                <div class="form-group">
-                                    <label for="phone">Телефон</label>
-                                    <input type="text" class="form-control" id="phone" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="email">Email</label>
-                                    <input type="text" class="form-control" id="email" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="comment">Комментарии к заказу</label>
-                                    <textarea class="form-control" id="comment" rows="3"></textarea>
-                                </div>
-                                <div class="form-group form-check">
-                                    <input type="checkbox" class="form-check-input" id="confCheck2" checked required>
-                                    <label class="form-check-label" for="confCheck2">Согласен на обработку ПДн</label>
+                            <div id="whoPays" class="alert alert-secondary" style="display: none;">
+                                <h4 class="mb-3">Кто оплачивает заказ?</h4>
+                                <ul class="nav nav-pills mb-3" id="tabsWhoPays" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link active" id="tabUl" data-toggle="tab" href="#ul" role="tab" aria-controls="ul" aria-selected="true">Юридическое лицо</a>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link" id="tabFl" data-toggle="tab" href="#fl" role="tab" aria-controls="fl" aria-selected="false">Физическое лицо</a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content" id="myTabContent">
+                                    <div class="tab-pane fade show active" id="ul" role="tabpanel" aria-labelledby="tabUl">
+                                        <div class="mt-4">
+                                            <div class="form-group">
+                                                <label for="nameCompany">Полное наименование организации <span class="text-sanger">*</span></label>
+                                                <input type="text" class="form-control" id="nameCompany">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="legalAddress">Юридический адрес</label>
+                                                <input type="text" class="form-control" id="legalAddress">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="actualAddress">Фактический адрес <small class="text-muted">(для доставки курьером)</small></label>
+                                                <input type="text" class="form-control" id="actualAddress">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="mailingAddress">Почтовый адрес <small class="text-muted">(для отправки Почтой России)</small></label>
+                                                <input type="text" class="form-control" id="mailingAddress">
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="col-xl-6">
+                                                    <div class="form-group">
+                                                        <label for="inn">ИНН</label>
+                                                        <input type="text" class="form-control" id="inn">
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-6">
+                                                    <div class="form-group">
+                                                        <label for="kpp">КПП</label>
+                                                        <input type="text" class="form-control" id="kpp">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="col-xl-6">
+                                                    <div class="form-group">
+                                                        <label for="contactPersonFio">Контактное лицо <small class="text-muted">(ФИО)</small></label>
+                                                        <input type="text" class="form-control" id="contactPersonFio">
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-6">
+                                                    <div class="form-group">
+                                                        <label for="contactPersonPost">Должность</label>
+                                                        <input type="text" class="form-control" id="contactPersonPost">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="col-xl-6">
+                                                    <div class="form-group">
+                                                        <label for="mobilePhone">Мобильный телефон</label>
+                                                        <input type="text" class="form-control" id="mobilePhone">
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-6">
+                                                    <div class="form-group">
+                                                        <label for="workPhone">Рабочий телефон</label>
+                                                        <input type="text" class="form-control" id="workPhone">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="col-xl-6">
+                                                    <div class="form-group">
+                                                        <label for="fax">Факс</label>
+                                                        <input type="text" class="form-control" id="fax">
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-6">
+                                                    <div class="form-group">
+                                                        <label for="email">Email <span class="text-sanger">*</span></label>
+                                                        <input type="text" class="form-control" id="email" required>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="comment">Комментарии к заказу</label>
+                                                <textarea class="form-control" id="comment" rows="3"></textarea>
+                                            </div>
+                                            <div class="form-group form-check">
+                                                <input type="checkbox" class="form-check-input" id="confCheck2" checked required>
+                                                <label class="form-check-label" for="confCheck2">Согласен на обработку ПДн</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="fl" role="tabpanel" aria-labelledby="tabFl">
+                                        <div class="mt-4">
+                                            <div class="form-group">
+                                                <label for="name">Имя</label>
+                                                <input type="text" class="form-control" id="name">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="surname">Фамилия</label>
+                                                <input type="text" class="form-control" id="surname">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="phone">Телефон</label>
+                                                <input type="text" class="form-control" id="phone" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="email">Email</label>
+                                                <input type="text" class="form-control" id="email" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="comment">Комментарии к заказу</label>
+                                                <textarea class="form-control" id="comment" rows="3"></textarea>
+                                            </div>
+                                            <div class="form-group form-check">
+                                                <input type="checkbox" class="form-check-input" id="confCheck2" checked required>
+                                                <label class="form-check-label" for="confCheck2">Согласен на обработку ПДн</label>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+                            <div id="btnGroupCheckout">
+                                <button class="btn btn-warning" id="btnCheckout">Оформить заказ</button>
+                                <button class="btn btn-outline-warning text-dark">Очистить корзину</button>
+                            </div>
                         </div>
-                        <button class="btn btn-warning">Оформить</button>
                     </form>
                 </div>
                 <hr class="title-line mt-1 mb-4" align="left">

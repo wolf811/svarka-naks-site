@@ -47,7 +47,7 @@ class Category(models.Model):
         return self.name
 
     # def get_absolute_url(self):
-    #     return reverse('journal:archive_by_category',
+    #     return reverse('journal:catalog_by_category',
     #                     args=[self.slug])
 
 class Product(models.Model):

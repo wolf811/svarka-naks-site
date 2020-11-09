@@ -89,3 +89,7 @@ $('.truncate').succinct({
 });
 
 // END Clipping text
+
+$('#btnCheckout').click(function() {
+    $('#whoPays').show();
+})

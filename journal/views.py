@@ -74,8 +74,8 @@ def authors(request):
 	}
 	return render(request, 'journal/authors.html', content)
 
-def archive(request, category_slug=None):
-	title = 'Архив номеров'
+def catalog(request, category_slug=None):
+	title = 'Каталог номеров'
 	category = None
 	categories = Category.objects.all().order_by('num')
 	products = Product.objects.filter(public=True)
@@ -88,7 +88,7 @@ def archive(request, category_slug=None):
 		'categories': categories,
 		'products': products
 	}
-	return render(request, 'journal/archive.html', content)
+	return render(request, 'journal/catalog.html', content)
 
 def subscription(request):
 	title = 'Подписка'

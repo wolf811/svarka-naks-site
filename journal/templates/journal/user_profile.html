@@ -19,38 +19,71 @@
                             <a class="nav-link active" href="{% url 'user_profile' %}">Мой профиль</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="#">Заказы</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="{% url 'user_subscriptions' %}">Подписки</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Журналы</a>
+                        </li>
                     </ul>
-                    <form>
-                        <div class="alert alert-light shadow text-dark">
-                            <form>
-                                <fieldset class="px-sm-5" disabled>
-                                    <div class="form-group">
-                                        <label for="name">Имя</label>
-                                        <input type="text" class="form-control" id="name" value="Иванов">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="surname">Фамилия</label>
-                                        <input type="text" class="form-control" id="surname" value="Василий">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="phone">Телефон</label>
-                                        <input type="text" class="form-control" id="phone" required value="89032588545">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="email">Email</label>
-                                        <input type="text" class="form-control" id="email" required value="ivanov@mail.com">
-                                    </div>
-                                    <div class="form-group form-check">
-                                        <input type="checkbox" class="form-check-input" id="confCheck2" checked required>
-                                        <label class="form-check-label" for="confCheck2">Согласен на обработку ПДн</label>
-                                    </div>
-                                </fieldset>
-                                <button type="submit" class="btn btn-warning">Изменить</button>
-                            </form>
-                        </div>
-                    </form>
+                    <div class="alert alert-light shadow text-dark">
+                        <h4>Профиль юридического лица</h4>
+                        <form>
+                            <fieldset class="px-sm-5" disabled>
+                                <div class="form-group">
+                                    <label for="name">Имя</label>
+                                    <input type="text" class="form-control" id="name" value="Иванов">
+                                </div>
+                                <div class="form-group">
+                                    <label for="surname">Фамилия</label>
+                                    <input type="text" class="form-control" id="surname" value="Василий">
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Телефон</label>
+                                    <input type="text" class="form-control" id="phone" required value="89032588545">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="text" class="form-control" id="email" required value="ivanov@mail.com">
+                                </div>
+                                <div class="form-group form-check">
+                                    <input type="checkbox" class="form-check-input" id="confCheck2" checked required>
+                                    <label class="form-check-label" for="confCheck2">Согласен на обработку ПДн</label>
+                                </div>
+                            </fieldset>
+                            <button type="submit" class="btn btn-warning">Изменить</button>
+                        </form>
+                    </div>
+                    <div class="alert alert-light shadow text-dark">
+                        <h4>Профиль физического лица</h4>
+                        <form>
+                            <fieldset class="px-sm-5" disabled>
+                                <div class="form-group">
+                                    <label for="fio">ФИО</label>
+                                    <input type="text" class="form-control" id="fio" value="Иванов" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="birthday">Год рождения</label>
+                                    <input type="date" class="form-control" id="birthday" value="Василий">
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Телефон</label>
+                                    <input type="text" class="form-control" id="phone" required value="89032588545">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="text" class="form-control" id="email" required value="ivanov@mail.com">
+                                </div>
+                                <div class="form-group form-check">
+                                    <input type="checkbox" class="form-check-input" id="confCheck2" checked required>
+                                    <label class="form-check-label" for="confCheck2">Согласен на обработку ПДн</label>
+                                </div>
+                            </fieldset>
+                            <button type="submit" class="btn btn-warning">Изменить</button>
+                        </form>
+                    </div>
                 </div>
                 <hr class="title-line mt-1 mb-4" align="left">
             </div>

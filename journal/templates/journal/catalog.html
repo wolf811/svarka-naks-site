@@ -6,15 +6,15 @@
         <nav class="mb-5" aria-label="breadcrumb">
             <ol class="breadcrumb bg-transparent border-bottom ">
                 <li class="breadcrumb-item"><a href="{% url 'home' %}">Главная</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Архив номеров</li>
+                <li class="breadcrumb-item active" aria-current="page">Каталог номеров</li>
             </ol>
         </nav>
         <div class="row">
             <div class="col-lg-8 col-xl-9">
-                <h2 class="text-color-journal">Архив номеров</h2>
+                <h2 class="text-color-journal">Каталог номеров</h2>
                 <hr class="title-line mb-4" align="left">
                 <div class="content-left mb-4">
-                    <div class="accordion" id="accordionArchive">
+                    <div class="accordion" id="accordionCatalog">
                         {% for category in categories %}
                         <div class="card ">
                             <div class="card-header" id="heading_{{ forloop.counter }}">
@@ -24,7 +24,7 @@
                                     </button>
                                 </h2>
                             </div>
-                            <div id="collapse_{{ forloop.counter }}" class="collapse {% if forloop.counter == 1 %}show{% endif %}" aria-labelledby="heading_{{ forloop.counter }}" data-parent="#accordionArchive">
+                            <div id="collapse_{{ forloop.counter }}" class="collapse {% if forloop.counter == 1 %}show{% endif %}" aria-labelledby="heading_{{ forloop.counter }}" data-parent="#accordionCatalog">
                                 <div class="card-body">
                                     <div class="row row-cols-1 row-cols-md-3">
                                         {% for product in products %}
@@ -55,7 +55,7 @@
                                     </button>
                                 </h2>
                             </div>
-                            <div id="collapse_02" class="collapse" aria-labelledby="heading_02" data-parent="#accordionArchive">
+                            <div id="collapse_02" class="collapse" aria-labelledby="heading_02" data-parent="#accordionCatalog">
                                 <div class="card-body">
                                     <div class="row row-cols-1 row-cols-md-3">
                                         <div class="col mb-4">
@@ -142,7 +142,7 @@
                                     </button>
                                 </h2>
                             </div>
-                            <div id="collapse_03" class="collapse" aria-labelledby="heading_03" data-parent="#accordionArchive">
+                            <div id="collapse_03" class="collapse" aria-labelledby="heading_03" data-parent="#accordionCatalog">
                                 <div class="card-body">
                                     Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
                                 </div>
@@ -156,7 +156,7 @@
                                     </button>
                                 </h2>
                             </div>
-                            <div id="collapse_04" class="collapse" aria-labelledby="heading_04" data-parent="#accordionArchive">
+                            <div id="collapse_04" class="collapse" aria-labelledby="heading_04" data-parent="#accordionCatalog">
                                 <div class="card-body">
                                     Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
                                 </div>
