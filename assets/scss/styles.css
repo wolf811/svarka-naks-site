@@ -189,4 +189,7 @@ body {
   color: #36529d;
   border: 1px solid #dee2e6; }
 
+.nav-pills-journal .nav-link.active {
+  background-color: #36529d; }
+
 /*# sourceMappingURL=styles.css.map */

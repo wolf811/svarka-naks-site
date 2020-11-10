@@ -75,9 +75,9 @@
                                     <h6 class="text-bold mx-auto mb-0">16250 руб.</h6>
                                 </div>
                             </div>
-                            <div id="whoPays" class="alert alert-secondary" style="display: none;">
-                                <h4 class="mb-3">Кто оплачивает заказ?</h4>
-                                <ul class="nav nav-pills mb-3" id="tabsWhoPays" role="tablist">
+                            <div id="customer" class="alert alert-secondary" style="display: none;">
+                                <h4 class="mb-3">Заказчик</h4>
+                                <ul class="nav nav-pills nav-pills-journal mb-3" id="tabsCustomer" role="tablist">
                                     <li class="nav-item" role="presentation">
                                         <a class="nav-link active" id="tabUl" data-toggle="tab" href="#ul" role="tab" aria-controls="ul" aria-selected="true">Юридическое лицо</a>
                                     </li>
@@ -89,8 +89,8 @@
                                     <div class="tab-pane fade show active" id="ul" role="tabpanel" aria-labelledby="tabUl">
                                         <div class="mt-4">
                                             <div class="form-group">
-                                                <label for="nameCompany">Полное наименование организации <span class="text-sanger">*</span></label>
-                                                <input type="text" class="form-control" id="nameCompany">
+                                                <label for="nameCompany">Полное наименование организации <span class="text-danger">*</span></label>
+                                                <input type="text" class="form-control" id="nameCompany" required>
                                             </div>
                                             <div class="form-group">
                                                 <label for="legalAddress">Юридический адрес</label>
@@ -155,11 +155,12 @@
                                                 </div>
                                                 <div class="col-xl-6">
                                                     <div class="form-group">
-                                                        <label for="email">Email <span class="text-sanger">*</span></label>
-                                                        <input type="text" class="form-control" id="email" required>
+                                                        <label for="email">Email <span class="text-danger">*</span></label>
+                                                        <input type="text" class="form-control" id="email" value="info@mail.ru" required>
                                                     </div>
                                                 </div>
                                             </div>
+                                            {% comment %}
                                             <div class="form-group">
                                                 <label for="comment">Комментарии к заказу</label>
                                                 <textarea class="form-control" id="comment" rows="3"></textarea>
@@ -168,29 +169,38 @@
                                                 <input type="checkbox" class="form-check-input" id="confCheck2" checked required>
                                                 <label class="form-check-label" for="confCheck2">Согласен на обработку ПДн</label>
                                             </div>
+                                            {% endcomment %}
                                         </div>
                                     </div>
                                     <div class="tab-pane fade" id="fl" role="tabpanel" aria-labelledby="tabFl">
                                         <div class="mt-4">
-                                            <div class="form-group">
-                                                <label for="name">Имя</label>
-                                                <input type="text" class="form-control" id="name">
+                                            <div class="form-row">
+                                                <div class="col-xl-6">
+                                                    <div class="form-group">
+                                                        <label for="fio">ФИО <span class="text-danger">*</span></label>
+                                                        <input type="text" class="form-control" id="fio" required="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-6">
+                                                    <div class="form-group">
+                                                        <label for="yearBirth">Год рождения</label>
+                                                        <input type="text" class="form-control" id="yearBirth">
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="form-group">
-                                                <label for="surname">Фамилия</label>
-                                                <input type="text" class="form-control" id="surname">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="phone">Телефон</label>
-                                                <input type="text" class="form-control" id="phone" required>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="email">Email</label>
-                                                <input type="text" class="form-control" id="email" required>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="comment">Комментарии к заказу</label>
-                                                <textarea class="form-control" id="comment" rows="3"></textarea>
+                                            <div class="form-row">
+                                                <div class="col-xl-6">
+                                                    <div class="form-group">
+                                                        <label for="email">Email</label>
+                                                        <input type="text" class="form-control" id="email" value="info@mail.ru" required>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-6">
+                                                    <div class="form-group">
+                                                        <label for="mobilePhone">Телефон</label>
+                                                        <input type="text" class="form-control" id="mobilePhone">
+                                                    </div>
+                                                </div>
                                             </div>
                                             <div class="form-group form-check">
                                                 <input type="checkbox" class="form-check-input" id="confCheck2" checked required>
@@ -201,8 +211,12 @@
                                 </div>
                             </div>
                             <div id="btnGroupCheckout">
-                                <button class="btn btn-warning" id="btnCheckout">Оформить заказ</button>
-                                <button class="btn btn-outline-warning text-dark">Очистить корзину</button>
+                                <button type="button" class="btn btn-warning" id="btnCheckout">Оформить заказ</button>
+                                <button type="button" class="btn btn-outline-warning text-dark">Очистить корзину</button>
+                            </div>
+                            <div id="btnGroupSaveCustomer" style="display: none;">
+                                <button type="submit" class="btn btn-warning" id="btnSaveCustomer">Сохранить</button>
+                                <button type="button" class="btn btn-outline-warning text-dark">Отменить</button>
                             </div>
                         </div>
                     </form>

@@ -91,5 +91,7 @@ $('.truncate').succinct({
 // END Clipping text
 
 $('#btnCheckout').click(function() {
-    $('#whoPays').show();
+    $('#customer').show();
+    $('#btnGroupSaveCustomer').show();
+    $('#btnGroupCheckout').hide();
 })
