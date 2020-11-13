@@ -22,7 +22,10 @@
                             <h4>Оформление заказа</h4>
                             <hr>
                             <div class="row align-items-center">
-                                <div class="col-sm-6">
+                                <div class="col-auto">
+                                    <span class="text-secondary">1</span>
+                                </div>
+                                <div class="col-sm-5">
                                     <h6 class="mb-3 mb-sm-0">Электронная версия журнала "Сварка и диагностика" №4-2020<br><small><a href="#" target="_blank">Содержание</a></small></h6>
                                 </div>
                                 <div class="col-6 col-sm-3">
@@ -45,7 +48,10 @@
                             </div>
                             <hr>
                             <div class="row align-items-center">
-                                <div class="col-sm-6">
+                                <div class="col-auto">
+                                    <span class="text-secondary">2</span>
+                                </div>
+                                <div class="col-sm-5">
                                     <h6 class="mb-3 mb-sm-0">Электронная версия журнала "Сварка и диагностика" №4-2020<br><small><a href="#" target="_blank">Содержание</a></small></h6>
                                 </div>
                                 <div class="col-6 col-sm-3">
@@ -85,9 +91,15 @@
                                         <a class="nav-link" id="tabFl" data-toggle="tab" href="#fl" role="tab" aria-controls="fl" aria-selected="false">Физическое лицо</a>
                                     </li>
                                 </ul>
+                                <hr>
                                 <div class="tab-content" id="myTabContent">
                                     <div class="tab-pane fade show active" id="ul" role="tabpanel" aria-labelledby="tabUl">
                                         <div class="mt-4">
+                                            <div class="mb-3">
+                                                <p>Вы можете выбрать ранее созданный профиль организации или заполнить реквизиты новой организации, которая будет оплачивать заказ:</p>
+                                                <a href="#"><i class="fas fa-chevron-right text-warning mr-3"></i>ООО "Сварка трубопроводов"</a>
+                                            </div>
+                                            <h5 class="mb-3">Новый профиль</h5>
                                             <div class="form-group">
                                                 <label for="nameCompany">Полное наименование организации <span class="text-danger">*</span></label>
                                                 <input type="text" class="form-control" id="nameCompany" required>
@@ -105,13 +117,13 @@
                                                 <input type="text" class="form-control" id="mailingAddress">
                                             </div>
                                             <div class="form-row">
-                                                <div class="col-xl-6">
+                                                <div class="col-sm-6">
                                                     <div class="form-group">
                                                         <label for="inn">ИНН</label>
                                                         <input type="text" class="form-control" id="inn">
                                                     </div>
                                                 </div>
-                                                <div class="col-xl-6">
+                                                <div class="col-sm-6">
                                                     <div class="form-group">
                                                         <label for="kpp">КПП</label>
                                                         <input type="text" class="form-control" id="kpp">
@@ -133,13 +145,13 @@
                                                 </div>
                                             </div>
                                             <div class="form-row">
-                                                <div class="col-xl-6">
+                                                <div class="col-sm-6">
                                                     <div class="form-group">
                                                         <label for="mobilePhone">Мобильный телефон</label>
                                                         <input type="text" class="form-control" id="mobilePhone">
                                                     </div>
                                                 </div>
-                                                <div class="col-xl-6">
+                                                <div class="col-sm-6">
                                                     <div class="form-group">
                                                         <label for="workPhone">Рабочий телефон</label>
                                                         <input type="text" class="form-control" id="workPhone">
@@ -147,13 +159,13 @@
                                                 </div>
                                             </div>
                                             <div class="form-row">
-                                                <div class="col-xl-6">
+                                                <div class="col-sm-6">
                                                     <div class="form-group">
                                                         <label for="fax">Факс</label>
                                                         <input type="text" class="form-control" id="fax">
                                                     </div>
                                                 </div>
-                                                <div class="col-xl-6">
+                                                <div class="col-sm-6">
                                                     <div class="form-group">
                                                         <label for="email">Email <span class="text-danger">*</span></label>
                                                         <input type="text" class="form-control" id="email" value="info@mail.ru" required>
@@ -174,6 +186,11 @@
                                     </div>
                                     <div class="tab-pane fade" id="fl" role="tabpanel" aria-labelledby="tabFl">
                                         <div class="mt-4">
+                                            <div class="mb-3">
+                                                <p>Вы можете выбрать ранее созданный профиль или создать новый:</p>
+                                                <a href="#"><i class="fas fa-chevron-right text-warning mr-3"></i>Иванов Иван Иванович</a>
+                                            </div>
+                                            <h5 class="mb-3">Новый профиль</h5>
                                             <div class="form-row">
                                                 <div class="col-xl-6">
                                                     <div class="form-group">
@@ -181,7 +198,7 @@
                                                         <input type="text" class="form-control" id="fio" required="">
                                                     </div>
                                                 </div>
-                                                <div class="col-xl-6">
+                                                <div class="col-sm-6">
                                                     <div class="form-group">
                                                         <label for="yearBirth">Год рождения</label>
                                                         <input type="text" class="form-control" id="yearBirth">
@@ -189,13 +206,13 @@
                                                 </div>
                                             </div>
                                             <div class="form-row">
-                                                <div class="col-xl-6">
+                                                <div class="col-sm-6">
                                                     <div class="form-group">
-                                                        <label for="email">Email</label>
+                                                        <label for="email">Email <span class="text-danger">*</span></label>
                                                         <input type="text" class="form-control" id="email" value="info@mail.ru" required>
                                                     </div>
                                                 </div>
-                                                <div class="col-xl-6">
+                                                <div class="col-sm-6">
                                                     <div class="form-group">
                                                         <label for="mobilePhone">Телефон</label>
                                                         <input type="text" class="form-control" id="mobilePhone">
@@ -204,19 +221,19 @@
                                             </div>
                                             <div class="form-group form-check">
                                                 <input type="checkbox" class="form-check-input" id="confCheck2" checked required>
-                                                <label class="form-check-label" for="confCheck2">Согласен на обработку ПДн</label>
+                                                <label class="form-check-label" for="confCheck2">с <a href="#" target="_blank">Политикой обработки ПДн</a> ознакомлен и согласен</label>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div id="btnGroupCheckout">
-                                <button type="button" class="btn btn-warning" id="btnCheckout">Оформить заказ</button>
+                                <button type="button" class="btn btn-warning" id="btnCheckout">Оформить</button>
                                 <button type="button" class="btn btn-outline-warning text-dark">Очистить корзину</button>
                             </div>
                             <div id="btnGroupSaveCustomer" style="display: none;">
                                 <button type="submit" class="btn btn-warning" id="btnSaveCustomer">Сохранить</button>
-                                <button type="button" class="btn btn-outline-warning text-dark">Отменить</button>
+                                <button type="button" class="btn btn-outline-warning text-dark" id="btnCancelCustomer">Отменить</button>
                             </div>
                         </div>
                     </form>
