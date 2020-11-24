@@ -192,4 +192,10 @@ body {
 .nav-pills-journal .nav-link.active {
   background-color: #36529d; }
 
+.form-saved .row {
+  margin-bottom: 0.5rem; }
+
+.form-saved p {
+  margin-bottom: 0.25rem; }
+
 /*# sourceMappingURL=styles.css.map */

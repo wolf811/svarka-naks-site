@@ -92,12 +92,15 @@ $('.truncate').succinct({
 
 $('#btnCheckout').click(function() {
     $('#customer').show();
-    $('#btnGroupSaveCustomer').show();
     $('#btnGroupCheckout').hide();
 })
 
 $('#btnCancelCustomer').click(function() {
     $('#customer').hide();
-    $('#btnGroupSaveCustomer').hide();
     $('#btnGroupCheckout').show();
+})
+
+$('#btnSaveCustomer').click(function() {
+    $('#customer').hide();
+    $('#customerSaved').show();
 })
